@@ -1,4 +1,3 @@
-import Image from "next/image";
 import HeroSection from '../components/shared/HeroSection'
 import Project from "@/components/shared/Project";
 import Experience from "@/components/shared/Experience";
