@@ -5,7 +5,7 @@ import pic2 from '../../images/icons/Macbook-Air-appvarsity.vercel.app.png'
 import pic1 from '../../images/icons/celestique.png'
 import pic3 from '../../images/icons/Macbook-Air-brobl-client.vercel.app.png'
 
-export default function () {
+export default function Project () {
     return (
         <>
             <div className='max-w-[220px]  text-white bg-[#252121]  relative mx-auto px-3  rounded-tl-2xl rounded-br-2xl py-3.5' >
