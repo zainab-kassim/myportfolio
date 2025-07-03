@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #110F0F;
+  --background: #000000;
   --foreground: #ededed;
 }
 
@@ -73,5 +73,6 @@ body {
   transform-origin: 70% 70%;
   animation: wave 2s infinite;
 }
+
 
 
