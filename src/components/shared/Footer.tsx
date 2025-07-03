@@ -1,7 +1,7 @@
 import React from 'react'
 import coloredHr from '../../images/icons/pichr2.jpg'
 import Image from 'next/image'
-import twitter from '../../images/icons/logos (1).png'
+
 
 
 export default function Footer() {
