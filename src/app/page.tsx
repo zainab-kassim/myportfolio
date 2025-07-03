@@ -1,6 +1,5 @@
 import HeroSection from '../components/shared/HeroSection'
 import Project from "@/components/shared/Project";
-import Experience from "@/components/shared/Experience";
 import Footer from "@/components/shared/Footer";
 import Skills from "@/components/shared/Skills";
 import Aboutus from '@/components/shared/Aboutus';
