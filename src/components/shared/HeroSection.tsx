@@ -19,9 +19,9 @@ export default function HeroSection() {
 
         {/* icon and button */}
         <div className='md:flex hidden gap-7   px-8  items-center border-r-[0.5px]   border-l-[0.5px] border-[#565151]'>
-          <Image width={40} height={40} alt='icon' className=' w-9.5 h-9' src='https://cdn-icons-png.flaticon.com/512/2504/2504923.png' />
-          <Image width={40} height={40} alt='icon' className=' w-9.5 h-9' src='https://cdn-icons-png.flaticon.com/512/2504/2504911.png' />
-          <Image width={40} height={40} alt='icon' className=' w-9.5 h-9' src='https://cdn-icons-png.flaticon.com/512/831/831306.png' />
+          <a href='#'><Image width={40} height={40} alt='icon' className=' w-9.5 h-9' src='https://cdn-icons-png.flaticon.com/512/2504/2504923.png' /></a>
+          <a href='#'><Image width={40} height={40} alt='icon' className=' w-9.5 h-9' src='https://cdn-icons-png.flaticon.com/512/2504/2504911.png' /></a>
+          <a href='#'><Image width={40} height={40} alt='icon' className=' w-9.5 h-9' src='https://cdn-icons-png.flaticon.com/512/831/831306.png' /></a>
         </div>
 
         <div className='hidden md:flex'>
