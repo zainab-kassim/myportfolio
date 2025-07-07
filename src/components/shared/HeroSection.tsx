@@ -29,8 +29,8 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className='flex md:flex-row flex-col items-center mt-[30px] md:mt-36 max-w-6xl  mx-auto'>
-        <div className='md:mx-auto xl:px-8 my-10 md:block hidden'>
+      <div className='flex md:flex-row flex-col items-center gap-12 py-5 mt-[30px] md:mt-36 max-w-6xl mx-auto'>
+        <div className='md:mx-auto md:block hidden'>
           <Image width={540} height={300} alt='pacman-largescreen' className='mx-auto' src={pacmanl} />
         </div>
 
@@ -38,7 +38,7 @@ export default function HeroSection() {
           <Image width={280} height={280} alt='pacman-smallscreen' className='mx-auto' src={pacman2} />
         </div>
 
-        <div className='md:px-10 mx-auto'>
+        <div className=''>
           <p className='xl:text-5xl lg:text-4xl text-3xl font-extrabold'>Hey, I’m Zainab.</p>
           <p className='lg:text-4xl text-3xl font-extrabold pb-8'>Full stack Software Engineer</p>
           <p>I enjoy turning frameworks and designs into well driven philosophy art that can be gone,with 3+ Years of experience <br/> in the field.d designs into well driven philosophy art that can be gone, with 3+ Years of experience in the field.</p>
