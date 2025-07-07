@@ -19,9 +19,7 @@ export default function Aboutus() {
                     in the field, I thrive in making automation and believe that there I enjoy turning frameworks and designs into well driven
                     philosophy art that can be gone, with 3+ Years of experience in the field, I thrive in making.
                 </p>
-                <p>
-                    Hi, i am zainab kassim I enjoy turning frameworks and designs into well driven philosophy art that can be gone, with 3+ Years of experience in the field, I thrive in making automation and believe that there  I enjoy turning frameworks and designs into well driven philosophy art that can be gone, with 3+ Years of experience in the field, I thrive in making automation and believe that there.
-                </p>
+                
             </div>
 
         </div>

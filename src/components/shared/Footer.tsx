@@ -13,7 +13,7 @@ export default function Footer() {
                 <h6 className='text-sm pt-1 text-[#949494] text-center'>Reach out to me →</h6>
                 <Image width={1500} height={900} className='h-[8px] max-w-full mt-3' alt='coloredHr' src={coloredHr} />
                 <h5 className='text-md font-bold pt-3 text-center'>kassimzainab11@gmail.com</h5>
-                <div className='items-center flex justify-center md:gap-6 gap-3 pb-3 pt-8'>
+                <div className='items-center flex justify-center md:gap-6 gap-5 pb-3 pt-8'>
                           <a href='#'><Image width={50} height={40} alt='icon' className=' w-13 h-13 -rotate-12' src='https://cdn-icons-png.flaticon.com/512/2504/2504923.png' /></a>
                            <a href='#'><Image width={50} height={40} alt='icon' className=' w-13 h-13 rotate-12' src='https://cdn-icons-png.flaticon.com/512/2504/2504911.png' /></a>
                            <a href='#'><Image width={50} height={40} alt='icon' className=' w-13 h-13 -rotate-12' src='https://cdn-icons-png.flaticon.com/512/831/831306.png' /></a>

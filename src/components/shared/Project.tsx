@@ -11,7 +11,7 @@ export default function Project() {
             <h6 className='text-sm text-[#949494]'>During the span of 2023 - 2025</h6>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-10 mt-16'>
 
-                <div className='border-[1px] border-[#292828] pt-8 pb-20 px-6 rounded-xl'>
+                <div className='border-[1px] h-[670px] border-[#292828] pt-8 pb-10  px-8 rounded-xl'>
                     <Image width={900} height={900} className='rounded-md max-w-full' alt='project1' src={proj1} />
                     <div className='pt-8 '>
                         <h2 className='text-2xl font-bold'>Celestique</h2>
@@ -50,7 +50,7 @@ export default function Project() {
                 </div>
 
 
-                <div className='border-[1px] border-[#292828] pt-8 pb-20 px-8 rounded-xl'>
+                <div className='border-[1px] h-[670px] border-[#292828] pt-8 pb-10 px-8 rounded-xl'>
                     <Image width={900} height={900} className='rounded-md' alt='project2' src={proj2} />
                     <div className='pt-8'>
                         <h2 className='text-2xl font-bold'>Appvarsity</h2>
@@ -94,7 +94,7 @@ export default function Project() {
                 </div>
 
 
-                <div className='border-[1px] border-[#292828] pt-8 pb-20 px-8 rounded-xl'>
+                <div className='border-[1px] h-[670px] border-[#292828] pt-8 pb-10 px-8 rounded-xl'>
                     <Image width={900} height={900} className='rounded-md' alt='project2' src={proj2} />
                     <div className='pt-8'>
                         <h2 className='text-2xl font-bold'>Appvarsity</h2>
