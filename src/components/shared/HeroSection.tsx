@@ -29,7 +29,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className='flex md:flex-row flex-col items-center mt-[50px] md:mt-52 max-w-6xl  mx-auto'>
+      <div className='flex md:flex-row flex-col items-center mt-[30px] md:mt-36 max-w-6xl  mx-auto'>
         <div className='md:mx-auto xl:px-8 my-10 md:block hidden'>
           <Image width={540} height={300} alt='pacman-largescreen' className='mx-auto' src={pacmanl} />
         </div>

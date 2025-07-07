@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function Aboutus() {
     return (
-        <div className='mb-28 mt-44'>
+        <div className='my-16'>
 
             <p className='text-3xl font-extrabold flex items-center gap-6'>About us <Image width={50} height={50} src={icon1} alt='icon1' className='w-10 h-10'/></p>
             <h6 className='text-sm pt-1 text-[#949494]'>More about me and what i have to offer</h6>

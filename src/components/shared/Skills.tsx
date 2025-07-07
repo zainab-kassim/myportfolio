@@ -5,7 +5,7 @@ import coloredHr from '../../images/icons/pichr2.jpg'
 
 export default function Skills() {
     return (
-        <div className='mb-24 py-16'>
+        <div className='mb-12 py-16'>
             <p className='text-3xl font-extrabold'>Skills  🧠</p>
             <h6 className='text-sm pt-1 text-[#949494]'>More about me and what i have to offer</h6>
             <Image width={1500} height={900} className='h-[8px] max-w-full mt-3' alt='coloredHr' src={coloredHr} />

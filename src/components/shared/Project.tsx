@@ -6,7 +6,7 @@ import pic1 from '../../images/icons/pichr2.jpg'
 
 export default function Project() {
     return (
-        <div className='my-48 '>
+        <div className='my-44 '>
             <p className='text-3xl font-extrabold'>Here’s some things i have built 🥳</p>
             <h6 className='text-sm text-[#949494]'>During the span of 2023 - 2025</h6>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-10 mt-16'>
