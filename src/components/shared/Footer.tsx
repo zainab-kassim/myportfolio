@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function Footer() {
     return (
-        <div className=''>
+        <div>
             <p className='text-3xl font-extrabold'>Get In Touch 👋🏼</p>
             <h6 className='text-sm pt-1 text-[#949494]'>Reach Out to me if you want to collab or build something magnificent , i am one call away !</h6>
             <div className='px-8 py-6 my-5 bg-[#191919] rounded-xl'>

@@ -7,14 +7,12 @@ import Aboutus from '@/components/shared/Aboutus';
 export default function Home() {
   return (
     <>
-      <div className="max-w-7xl justify-center mx-auto mb-10 mt-12 md:px-16 px-6">
+      <div className="max-w-7xl justify-center mx-auto mb-10 mt-12 md:px-16 px-8">
         <HeroSection />
-        <div className='max-w-full mx-auto'>
           <Project />
           <Aboutus/>
           <Skills />
           <Footer />
-        </div>
       </div>
 
 
