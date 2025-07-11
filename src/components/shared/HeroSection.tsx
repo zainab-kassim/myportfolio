@@ -36,19 +36,21 @@ export default function HeroSection() {
 
 
 
-      <div className='flex md:flex-row flex-col justify-center items-center gap-12 py-5 mt-[30px] md:mt-36'>
+      <div className='flex md:flex-row flex-col justify-center items-center gap-12 py-5 mt-[40px] md:mt-36'>
         <div className='md:block hidden'>
-          <Image width={1300} height={400} alt='pacman-largescreen' className='mx-auto' src={pacmanl} />
+          <Image width={1780} height={400} alt='pacman-largescreen' className='mx-auto' src={pacmanl} />
         </div>
 
-        <div className='md:mx-auto mb-8 mt-28 md:hidden block'>
+        <div className='md:mx-auto mb-8 mt-16 md:hidden block'>
           <Image width={500} height={280} alt='pacman-smallscreen' className='mx-auto' src={pacman2} />
         </div>
 
         <div className=''>
-          <h2 className='text-4xl font-bold '>Hey, I’m <span className=''> 𝒁𝑨𝑰𝑵𝑨𝑩. </span> </h2>
-          <h2 className='lg:text-4xl text-3xl font-extrabold pb-8 bg-gradient-to-r from-[#eb3349] to-[#9733ee] bg-clip-text text-transparent'>Fullstack Software Engineer</h2>
-          I enjoy turning frameworks and designs into well driven philosophy art that can be gone,with 3+ Years of experience in the field. designs into well driven philosophy art that can be gone, with 3+ Years of experience in the field.
+          <h2 className='lg:text-5xl text-4xl font-bold '>Hey, I’m <span className=''> 𝒁𝑨𝑰𝑵𝑨𝑩. </span> </h2>
+          <h2 className='lg:text-[40px] text-4xl font-extrabold pb-8 bg-gradient-to-r from-[#eb3349] to-[#9733ee] bg-clip-text text-transparent'>Fullstack Software Engineer</h2>
+          <p className='lg:text-lg text-md'>
+            With 3+ years of hands-on experience, I specialize in building functional, responsive websites that look great and feel intuitive. I find real joy in bringing designs to life and creating smooth user experiences that leave a lasting impression. It’s something I truly enjoy and find purpose in doing
+          </p>
         </div>
 
       </div>
