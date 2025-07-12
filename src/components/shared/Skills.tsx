@@ -7,8 +7,8 @@ export default function Skills() {
     return (
         <div className='mb-12 py-16'>
             <p className='text-3xl font-extrabold'>Skills  🧠</p>
-            <h6 className='text-sm pt-1 text-[#949494]'>More about me and what i have to offer</h6>
-            <Image width={1500} height={900} className='h-[8px] max-w-full mt-3' alt='coloredHr' src={coloredHr} />
+            <h6 className='text-sm pt-[0.5px] text-[#949494]'>More about me and what i have to offer</h6>
+            <Image width={1500} height={900} className='h-[7px] md:h-[8px] max-w-full mt-5' alt='coloredHr' src={coloredHr} />
             <div className='flex flex-wrap gap-6 items-center max-w-full my-12'>
                 <div className='flex items-center justify-center h-12  w-auto gap-3 px-8 py-2  rounded-lg border-[0.5px] border-[#ffffff50] bg-[#363535]'>
                     <Image alt='Next-icon' width={25} height={25} className='w-8 h-8' src='https://img.icons8.com/?size=100&id=MWiBjkuHeMVq&format=png&color=000000' />

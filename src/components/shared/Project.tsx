@@ -12,11 +12,11 @@ export default function Project() {
             <h6 className='text-sm text-[#949494]'>During the span of 2023 - 2025</h6>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-14 mt-16'>
 
-                <div className='border-[1px] h-[660px] border-[#605c5c97] pt-8 pb-10  px-5 rounded-xl'>
+                <div className='border-[1px] lg:h-[660px] md:h-[670px] h-[690px]  border-[#605c5c97] pt-6 pb-10  px-5 rounded-xl'>
                     <Image width={900} height={900} className='rounded-md max-w-full' alt='project1' src={proj1} />
                     <div className='pt-8 '>
                         <h2 className='text-2xl font-bold'>Celestique</h2>
-                        <Image width={1000} height={1000} className='h-[7px] mt-2  w-full' alt='hr-rule' src={pic1} />
+                        <Image width={1000} height={1000} className='h-[7px] md:h-[7px] mt-2  w-full' alt='hr-rule' src={pic1} />
                         <div className='text-md max-w-xl tracking-wide mt-4 text-[#949494]'>
                            Celestique is a fully functional e-commerce platform that features a smooth shopping experience with key functionalities such as product listings, filtering options, add-to-cart functionality, and secure payment integration using Paystack.
                         </div>
@@ -51,13 +51,13 @@ export default function Project() {
                 </div>
 
 
-                <div className='border-[1px] h-[660px] border-[#605c5c97]  pt-8 pb-10 px-5 rounded-xl'>
+                <div className='border-[1px] lg:h-[660px] md:h-[670px] h-[690px] border-[#605c5c97]  pt-6 pb-10 px-5 rounded-xl'>
                     <Image width={900} height={900} className='rounded-md' alt='project2' src={proj2} />
                     <div className='pt-8'>
                         <h2 className='text-2xl font-bold'>Appvarsity</h2>
-                        <Image width={1000} height={1000} className='h-[7px] mt-2  w-full' alt='hr-rule' src={pic1} />
+                        <Image width={1000} height={1000} className='h-[6px] md:h-[7px] mt-2  w-full' alt='hr-rule' src={pic1} />
                         <div className='text-md max-w-xl tracking-wide mt-4 text-[#949494]'>
-                            App Varsity is a student-focused learning platform designed specifically for Aptech students. It provides easy access to past questions, study materials, course notes, and helpful resources to support academic success across all semesters.
+                            App Varsity is a student-focused learning platform designed specifically for Aptech students. It provides easy access to past questions, study materials, and helpful resources to support academic success across all semesters.
                         </div>
 
                         <div className='flex flex-wrap gap-4 max-w-xl items-center my-12'>
@@ -95,11 +95,11 @@ export default function Project() {
                 </div>
 
 
-                <div className='border-[1px] h-[670px] border-[#605c5c97] pt-8 pb-10 px-5 rounded-xl'>
+                <div className='border-[1px] lg:h-[660px] md:h-[670px] h-[690px]  border-[#605c5c97] pt-6 pb-10 px-5 rounded-xl'>
                     <Image width={900} height={900} className='rounded-md' alt='project2' src={proj3} />
                     <div className='pt-8'>
                         <h2 className='text-2xl font-bold'>Brobl</h2>
-                        <Image width={1000} height={1000} className='h-[7px] mt-2 w-full' alt='hr-rule' src={pic1} />
+                        <Image width={1000} height={1000} className='h-[6px] md:h-[7px] mt-2 w-full' alt='hr-rule' src={pic1} />
                         <div className='text-md max-w-xl tracking-wide mt-4 text-[#949494]'>
                           Brobl is a social networking platform that allows users to create posts, like and comment on content. Key features include user authentication, post creation, likes and comment systems, profile management, and a clean, interactive UI.
                         </div>

@@ -7,9 +7,9 @@ export default function Aboutme() {
     return (
         <div className='my-16'>
 
-            <p className='text-3xl font-extrabold flex items-center gap-3'>About us <Image width={50} height={50} src={icon1} alt='icon1' className='w-12 h-12' /></p>
-            <h6 className='text-sm pt-1 text-[#949494]'>More about me and what i have to offer</h6>
-            <Image width={1500} height={900} className='h-[8px] max-w-full mt-3' alt='project1' src={proj1} />
+            <p className='text-3xl font-extrabold flex items-center gap-3'>About me <Image width={50} height={50} src={icon1} alt='icon1' className='w-12 h-12' /></p>
+            <h6 className='text-sm pt-[0.5px]   text-[#949494]'>More about me and what i have to offer</h6>
+            <Image width={1500} height={900} className='h-[7px] md:h-[8px] max-w-full mt-5' alt='project1' src={proj1} />
             <div className='mt-8  text-lg traking-wide'>
                 <p className='pb-4'>
                     I’m passionate about building things that matter. Whether it’s a sleek website or a functional platform, I love bringing ideas to life through clean code and thoughtful design.
