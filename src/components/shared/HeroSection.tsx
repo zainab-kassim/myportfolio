@@ -6,7 +6,7 @@ import pacman2 from '../../images/icons/Untitled design.png'
 export default function HeroSection() {
   return (
     <>
-      <div className='flex sticky top-10 z-0 md:justify-evenly md:mx-auto justify-between  items-center  sm:px-6 px-5  border-[0.5px] backdrop-blur-3xl border-[#565151] py-3 rounded-xl '>
+      <div className='flex sticky top-10 z-2 md:justify-evenly md:mx-auto justify-between  items-center  sm:px-6 px-5  border-[0.5px] inset-shadow-sm shadow-xl/30 backdrop-blur-3xl border-[#565151] py-3 rounded-xl '>
         <div className='md:flex md:justify-center  hidden sm:gap-8 gap-6 items-center md:text-md text-[16px] font-sans '>
           <div><a href="">About me</a></div>
           <div><a href="">Project</a></div>
@@ -23,9 +23,9 @@ export default function HeroSection() {
 
         {/* icon and button */}
         <div className="relative hidden md:flex items-center justify-center border-x border-[#565151]  md:px-[0.5px] lg:w-[24%] md:w-[25%] group">
-            <a href='#'><Image width={50} height={40} alt='icon' className=' w-9 h-9 -rotate-12 relative left-4 transition-all duration-600 group-hover:-translate-x-8 group-hover:rotate-0' src='https://cdn-icons-png.flaticon.com/512/2504/2504923.png' /></a>
-            <a href='#'><Image width={50} height={40} alt='icon' className=' w-9 h-9 relative z-10  rotate-0 transition-all duration-600 group-hover:-translate-x-0' src='https://cdn-icons-png.flaticon.com/512/2504/2504911.png' /></a>
-            <a href='#'><Image width={50} height={40} alt='icon' className=' w-9 h-9 relative -left-4 rotate-12 transition-all duration-600 group-hover:translate-x-8 group-hover:rotate-0' src='https://cdn-icons-png.flaticon.com/512/831/831306.png' /></a>
+          <a href='#'><Image width={50} height={40} alt='icon' className=' w-9 h-9 -rotate-12 relative left-4 transition-all duration-600 group-hover:-translate-x-8 group-hover:rotate-0' src='https://cdn-icons-png.flaticon.com/512/2504/2504923.png' /></a>
+          <a href='#'><Image width={50} height={40} alt='icon' className=' w-9 h-9 relative z-10  rotate-0 transition-all duration-600 group-hover:-translate-x-0' src='https://cdn-icons-png.flaticon.com/512/2504/2504911.png' /></a>
+          <a href='#'><Image width={50} height={40} alt='icon' className=' w-9 h-9 relative -left-4 rotate-12 transition-all duration-600 group-hover:translate-x-8 group-hover:rotate-0' src='https://cdn-icons-png.flaticon.com/512/831/831306.png' /></a>
         </div>
 
 
@@ -37,7 +37,7 @@ export default function HeroSection() {
           </span>
 
 
-          <button className="pl-5 pr-10 py-3 font-sans relative rounded-xl font-semibold border border-[#565151]">
+          <button className="pl-5  pr-10 inset-shadow-sm shadow-xl/30 py-3 font-sans relative rounded-xl font-semibold border border-[#565151]">
             Get in touch
           </button>
         </div>
@@ -47,13 +47,13 @@ export default function HeroSection() {
 
 
 
-      <div className='flex md:flex-row flex-col justify-center items-center gap-12 py-5 mt-[40px] md:mt-36'>
+      <div className='flex md:flex-row flex-col justify-center items-center relative gap-12 py-5 mt-[40px] md:mt-36'>
         <div className='md:block hidden'>
-          <Image width={1780} height={400} alt='pacman-largescreen' className='mx-auto' src={pacmanl} />
+          <Image width={1780} height={400} alt='pacman-largescreen' className='mx-auto animate-vertical-bounce animate-range-rapid animate-iteration-count-infinite' src={pacmanl} />
         </div>
 
-        <div className='md:mx-auto mb-8 mt-16 md:hidden block'>
-          <Image width={500} height={280} alt='pacman-smallscreen' className='mx-auto' src={pacman2} />
+        <div className='md:mx-auto mb-3 mt-16 md:hidden block'>
+          <Image width={500} height={280} alt='pacman-smallscreen' className='mx-auto animate-jump animate-range-rapid animate-iteration-count-infinite' src={pacman2} />
         </div>
 
         <div className=''>
@@ -62,6 +62,17 @@ export default function HeroSection() {
           <p className='lg:text-lg md:text-[14px] text-md'>
             With 3+ years of hands-on experience, I specialize in building functional, responsive websites that look great and feel intuitive. I find real joy in bringing designs to life and creating smooth user experiences that leave a lasting impression. It’s something I truly enjoy and find purpose in doing
           </p>
+          <div className="md:hidden mt-6 items-center relative">
+            <span className="absolute translate-y-0.4 top-[17.8px] left-31 flex size-3.5 ">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-300 opacity-75"></span>
+              <span className="relative inline-flex size-3.5 rounded-full bg-green-500"></span>
+            </span>
+
+
+            <button className="pl-5  inset-shadow-sm shadow-xl/30 pr-10 py-3 font-sans relative rounded-xl font-semibold border border-[#565151]">
+              Get in touch
+            </button>
+          </div>
         </div>
 
       </div>
