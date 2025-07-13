@@ -47,9 +47,9 @@ export default function HeroSection() {
 
 
 
-      <div className='flex md:flex-row flex-col justify-center items-center relative gap-12 py-5 mt-[40px] md:mt-36'>
+      <div className='flex md:flex-row flex-col justify-center items-center relative md:gap-16 lg:gap-24 py-5 mt-[40px] md:mt-36'>
         <div className='md:block hidden'>
-          <Image width={1780} height={400} alt='pacman-largescreen' className='mx-auto animate-vertical-bounce animate-range-rapid animate-iteration-count-infinite' src={pacmanl} />
+          <Image width={1520} height={400} alt='pacman-largescreen' className='mx-auto animate-vertical-bounce animate-range-rapid animate-iteration-count-infinite' src={pacmanl} />
         </div>
 
         <div className='md:mx-auto mb-3 mt-16 md:hidden block'>
