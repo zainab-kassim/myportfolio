@@ -12,8 +12,8 @@ export default function Project() {
             <h6 className='text-sm text-[#949494]'>During the span of 2023 - 2025</h6>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-14 mt-16'>
 
-                <div className='border-[1px] lg:h-[660px] md:h-[670px] h-[690px]  border-[#605c5c97] pt-6 pb-10 rounded-xl'>
-                    <Image width={900} height={900} className='rounded-md max-w-full' alt='project1' src={proj1} />
+                <div className='border-[1px] lg:h-[660px] md:h-[670px] h-[690px]  border-[#605c5c97] pb-10 rounded-xl'>
+                    <Image width={900} height={1200} className='rounded-t-xl max-w-full' alt='project1' src={proj1} />
                     <div className='pt-8 px-5'>
                         <h2 className='text-2xl font-bold'>Celestique</h2>
                         <Image width={1000} height={1000} className='h-[7px] md:h-[7px] mt-2  w-full' alt='hr-rule' src={pic1} />
@@ -51,8 +51,8 @@ export default function Project() {
                 </div>
 
 
-                <div className='border-[1px] lg:h-[660px] md:h-[670px] h-[690px] border-[#605c5c97]  pt-6 pb-10  rounded-xl'>
-                    <Image width={900} height={900} className='rounded-md' alt='project2' src={proj2} />
+                <div className='border-[1px] lg:h-[660px] md:h-[670px] h-[690px] border-[#605c5c97]  pb-10  rounded-xl'>
+                    <Image width={900} height={1200} className='rounded-t-xl' alt='project2' src={proj2} />
                     <div className='pt-8 px-5'>
                         <h2 className='text-2xl font-bold'>Appvarsity</h2>
                         <Image width={1000} height={1000} className='h-[6px] md:h-[7px] mt-2  w-full' alt='hr-rule' src={pic1} />
@@ -95,8 +95,8 @@ export default function Project() {
                 </div>
 
 
-                <div className='border-[1px] lg:h-[660px] md:h-[670px] h-[690px]  border-[#605c5c97] pt-6 pb-10 rounded-xl'>
-                    <Image width={900} height={900} className='rounded-md' alt='project2' src={proj3} />
+                <div className='border-[1px] lg:h-[660px] md:h-[670px] h-[690px]  border-[#605c5c97]  pb-10 rounded-xl'>
+                    <Image width={900} height={1200} className='rounded-t-xl' alt='project2' src={proj3} />
                     <div className='pt-8 px-5'>
                         <h2 className='text-2xl font-bold'>Brobl</h2>
                         <Image width={1000} height={1000} className='h-[6px] md:h-[7px] mt-2 w-full' alt='hr-rule' src={pic1} />
