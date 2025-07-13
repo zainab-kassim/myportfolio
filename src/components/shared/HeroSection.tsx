@@ -57,22 +57,33 @@ export default function HeroSection() {
         </div>
 
         <div className=''>
-          <h2 className='lg:text-5xl text-4xl font-bold '>Hey, I’m <span className=''> 𝒁𝑨𝑰𝑵𝑨𝑩. </span> </h2>
-          <h2 className='lg:text-[40px] md:text-[28px] text-4xl font-extrabold pb-8 bg-gradient-to-r from-[#eb3349] to-[#9733ee] bg-clip-text text-transparent'>Fullstack Software Engineer</h2>
+          <h2 className='lg:text-3xl text-2xl font-bold '>Hey, I’m <span className=''> ZAINAB. </span> </h2>
+          <h2 className='lg:text-[40px] md:text-[28px] text-3xl font-black pb-8 bg-gradient-to-r from-[#eb3349] to-[#9733ee] bg-clip-text text-transparent'>Fullstack Software Engineer</h2>
           <p className='lg:text-lg md:text-[14px] text-md'>
             With 3+ years of hands-on experience, I specialize in building functional, responsive websites that look great and feel intuitive. I find real joy in bringing designs to life and creating smooth user experiences that leave a lasting impression. It’s something I truly enjoy and find purpose in doing
           </p>
-          <div className="md:hidden mt-6 items-center relative">
-            <span className="absolute translate-y-0.4 top-[17.8px] left-31 flex size-3.5 ">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-300 opacity-75"></span>
-              <span className="relative inline-flex size-3.5 rounded-full bg-green-500"></span>
-            </span>
 
-
-            <button className="pl-5  inset-shadow-sm shadow-xl/30 pr-10 py-3 font-sans relative rounded-xl font-semibold border border-[#565151]">
-              Get in touch
+          <div className='flex w-auto gap-3 flex-row '>
+            <button className="relative  mt-6 inline-flex h-12 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-[#9733ee] focus:ring-offset-2 focus:ring-offset-slate-50">
+              <span className="absolute w-auto inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#eb3349_0%,#393BB2_50%,#eb3349_100%)]" />
+              <span className="inline-flex text-md  h-full w-full cursor-pointer items-center justify-center rounded-xl bg-gray-900 sm:px-10 px-8 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+                resume
+              </span>
             </button>
+
+
+            <div className="md:hidden  mt-6 items-center relative">
+              <span className="absolute translate-y-0.4 top-[17.8px] left-31 flex size-3.5 ">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-300 opacity-75"></span>
+                <span className="relative inline-flex size-3.5 rounded-full bg-green-500"></span>
+              </span>
+
+              <button className="pl-5  inset-shadow-sm shadow-xl/30 pr-10 py-3 font-sans relative rounded-xl font-semibold border border-[#565151]">
+                Get in touch
+              </button>
+            </div>
           </div>
+
         </div>
 
       </div>
