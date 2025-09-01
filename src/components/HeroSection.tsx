@@ -13,7 +13,7 @@ export default function HeroSection() {
           <div className='flex flex-row lg:gap-12 md:gap-9 gap-6  justify-center  text-white tracking-wide items-center lg:text-[13px] text-sm'>
             <div><a href="#Projects">Projects</a></div>
             <div><a href="#Aboutme">About</a></div>
-            <a href="https://drive.google.com/file/d/1JaehIUUA5_AWPtPFUeoNh3J8lmQaS7Av/" target='_blank'>
+            <a href="https://docs.google.com/document/d/1lVQgfJbiybqjRakxfJUksAl2DdnFSI1YKD6itd8YFQM/edit?usp=sharing" target='_blank'>
               <div className="p-[0.5px] bg-white rounded-3xl cursor-pointer shadow-[0_0_7px_rgba(225,225,225,0.8)]">
                 <div className="rounded-full py-2 px-4 md:py-3 md:px-6 text-black text-xs   backdrop-blur-2xl">
                   resume
