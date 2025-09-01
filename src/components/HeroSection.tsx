@@ -8,9 +8,9 @@ export default function HeroSection() {
   return (
     <>
       <div className='sm:px-14 px-5 sticky top-8 z-20 '>
-        <div className='sm:flex  mx-auto max-w-sm sm:max-w-3xl sm:justify-between justify-items-center   sm:px-5 items-center bg-[#121212]/67  border-[0.5px] inset-shadow-sm shadow-xl/30 backdrop-blur-3xl  border-[#8f8f8f4c] py-2 rounded-full '>
+        <div className='sm:flex  mx-auto max-w-sm sm:max-w-3xl sm:justify-between  justify-items-center   sm:px-5 items-center bg-[#121212]/67  border-[0.5px] inset-shadow-sm shadow-xl/30 backdrop-blur-3xl  border-[#8f8f8f4c] py-2 rounded-full '>
           <Image height={40} width={40} className='w-8 h-8 sm:flex hidden' alt='logo' src='https://img.icons8.com/?size=100&id=a1I0W_J1dvei&format=png&color=ffffff' />
-          <div className='flex lg:gap-12 md:gap-9 gap-6 text-white tracking-wide items-center lg:text-[13px] text-sm'>
+          <div className='flex lg:gap-12 md:gap-9 gap-6  text-white tracking-wide items-center lg:text-[13px] text-sm'>
             <div><a href="#Projects">Projects</a></div>
             <div><a href="#Aboutme">About</a></div>
             <a href="https://drive.google.com/file/d/1JaehIUUA5_AWPtPFUeoNh3J8lmQaS7Av/" target='_blank'>
