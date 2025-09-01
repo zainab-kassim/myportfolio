@@ -1,10 +1,10 @@
 @import "tailwindcss";
-@import 'tailwindcss';
-@plugin "@midudev/tailwind-animations";
+@plugin '@midudev/tailwind-animations';
+
 
 :root {
-  --background: #000000;
-  --foreground: #ededed;
+  --background: #101010;
+  --foreground: #ffffff;
 }
 
 
@@ -14,6 +14,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+
 
 
 body {

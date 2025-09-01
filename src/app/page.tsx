@@ -1,21 +1,20 @@
-import HeroSection from '../components/shared/HeroSection'
-import Project from "@/components/shared/Project";
-import Footer from "@/components/shared/Footer";
-import Skills from "@/components/shared/Skills";
-import Aboutme from '@/components/shared/Aboutme';
+import HeroSection from '@/components/HeroSection'
+import Project from "@/components/Project";
+import Footer from "@/components/Footer";
+import Aboutme from '@/components/Aboutme';
 
 export default function Home() {
   return (
     <>
-      <div className="max-w-7xl justify-center mx-auto mb-10 mt-12 md:px-16 px-8">
+      <div className='justify-center  mx-auto'>
         <HeroSection />
-          <Project />
-          <Aboutme/>
-          <Skills />
+        <Project />
+        <div className='bg-white'>
+          <Aboutme />
           <Footer />
+        </div>
+
       </div>
-
-
     </>
   );
 }
