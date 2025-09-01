@@ -9,7 +9,7 @@ export default function Footer() {
     <div className='max-w-6xl mx-auto pt-16 pb-12 sm:px-14 px-5'>
       <div className='flex flex-col border-[#ececec] shadow-[0_0_40px_rgb(242,242,242)]  border-[0.5px] rounded-2xl py-12 bg-[#1C1C1C] justify-center items-center'>
         <div className='flex flex-row items-center text-white font-bold text-lg md:text-xl'>
-          Let's get in touch
+          Let&apos;s get in touch
           <span className="relative ml-3 flex size-3">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
             <span className="relative inline-flex size-3 rounded-full bg-green-500"></span>
