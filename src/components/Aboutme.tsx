@@ -50,15 +50,15 @@ export default function Aboutme() {
 
 
                 <div className='mx-auto max-w-6xl sm:px-14 px-5 pt-28 md:pt-40 '>
-                    <div className="font-extrabold text-black inline-block text-3xl">
-                        Everything you need to {''}
-                        <span className="relative inline-block w-full md:w-auto">
-                            know
-                            <span className="text-[#226A82] text-base font-normal absolute -bottom-5 -rotate-12 left-8 md:-right-15 bg-[#42E3FF] rounded-full px-5 w-auto  py-1 text-center">
-                                About me
-                            </span>
-                        </span>
+
+
+                    <div className="font-extrabold text-center w-[280px] sm:w-[360px] md:w-fit mx-auto relative flex flex-col md:flex-row items-center   text-black text-2xl md:text-3xl">
+                        Everything you need to know
+                        <div className="absolute right-6 top-13 sm:right-14 sm:top-12 md:-right-22 md:top-5 -rotate-12 w-32 bg-[#42E3FF] text-[#226A82] text-base font-normal rounded-full px-5 py-1">
+                            About me
+                        </div>
                     </div>
+
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 gap-y-11 md:gap-y-10 lg:gap-y-12 mt-16">
 
