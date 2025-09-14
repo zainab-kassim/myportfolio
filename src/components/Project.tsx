@@ -9,9 +9,9 @@ import brobl from '../images/icons/Brobl.jpg'
 export default function Project() {
     return (
         <div id='Projects' className='mx-auto max-w-6xl sm:px-14 px-5 py-24'>
-            <div className="font-extrabold  text-center w-[280px] sm:w-[360px] md:w-fit mx-auto relative flex flex-col md:flex-row items-center    text-2xl sm:text-3xl">
+            <div className="font-extrabold  text-center w-[280px] sm:w-[340px] md:w-fit mx-auto relative flex flex-col md:flex-row items-center justify-center   text-2xl sm:text-3xl">
                 Here&apos;s some things I have built
-                <div className="absolute right-1 top-13 sm:right-2 sm:top-15 md:-right-22 md:top-6 -rotate-12 w-32 bg-[#FF8B42] text-[#90440D] text-base font-normal rounded-full px-5 py-1">
+                <div className="absolute right-1 top-13 sm:right-2 sm:top-15 md:-right-22 md:top-6 -rotate-12 w-32 bg-[#FF8B42] text-[#90440D] text-sm font-normal rounded-full px-4 py-1.5">
                     2023 - 2025
                 </div>
             </div>

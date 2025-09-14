@@ -52,7 +52,7 @@ export default function Aboutme() {
                 <div className='mx-auto max-w-6xl sm:px-14 px-5 pt-28 md:pt-40 '>
 
 
-                    <div className="font-extrabold text-center w-[280px] sm:w-[360px] md:w-fit mx-auto relative flex flex-col md:flex-row items-center   text-black text-2xl md:text-3xl">
+                    <div className="font-extrabold text-center w-[280px] sm:w-[320px] md:w-fit mx-auto relative flex flex-col md:flex-row items-center   text-black text-2xl md:text-3xl">
                         Everything you need to know
                         <div className="absolute right-6 top-13 sm:right-14 sm:top-12 md:-right-22 md:top-5 -rotate-12 w-32 bg-[#42E3FF] text-[#226A82] text-base font-normal rounded-full px-5 py-1">
                             About me
