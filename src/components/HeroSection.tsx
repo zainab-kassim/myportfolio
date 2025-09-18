@@ -15,8 +15,8 @@ export default function HeroSection() {
             <div><a href="#Aboutme">About</a></div>
             <a href="https://docs.google.com/document/d/1lVQgfJbiybqjRakxfJUksAl2DdnFSI1YKD6itd8YFQM/edit?usp=sharing" target='_blank'>
               <div className="p-[0.5px] bg-white rounded-3xl cursor-pointer shadow-[0_0_7px_rgba(225,225,225,0.8)]">
-                <div className="rounded-full py-2 px-4 md:py-3 md:px-6 text-black text-xs   backdrop-blur-2xl">
-                  resume
+                <div className="rounded-full py-2 px-4 md:py-3 md:px-6 text-black   backdrop-blur-2xl">
+                  Resume
                 </div>
               </div>
             </a>
