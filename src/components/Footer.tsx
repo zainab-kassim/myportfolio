@@ -29,7 +29,7 @@ export default function Footer() {
 
       </div> */}
 
-      <div className=' flex flex-row items-center text-black justify-between border-t-[0.5px] py-8 border-[#313030]'>
+      <div className=' flex flex-row items-center text-black justify-between border-t-[0.5px] py-8 border-[#989898]'>
         <div className=' flex flex-row items-center font-bold text-[10px] sm:text-lg md:text-xl'>
           Let&apos;s Get In Touch
           <span className="relative ml-2 sm:ml-3 flex size-2 sm:size-3">
@@ -38,10 +38,10 @@ export default function Footer() {
           </span>
         </div>
         <div className='flex flex-row flex-wrap gap-2 text-[7px] sm:text-sm  items-center'>
-          <a href="https://www.instagram.com/zainab_temi_/"><h2>Instagram .</h2></a>
-          <a href="https://www.linkedin.com/in/zainab-kassim/"><h2>LinkedIn .</h2></a>
-          <a href="https://github.com/zainab-kassim"><h2>Github .</h2></a>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kassimzainab11@gmail.com"><h2>Gmail .</h2></a>
+          <a href="https://www.instagram.com/zainab_temi_/" target='_blank' className='cursor-pointer'><h2>Instagram .</h2></a>
+          <a href="https://www.linkedin.com/in/zainab-kassim/"  target='_blank' className='cursor-pointer'><h2>LinkedIn .</h2></a>
+          <a href="https://github.com/zainab-kassim"  target='_blank' className='cursor-pointer'><h2>Github .</h2></a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kassimzainab11@gmail.com"  target='_blank' className='cursor-pointer'><h2>Gmail .</h2></a>
         </div>
       </div>
     </div>
