@@ -50,7 +50,7 @@ export default function Project() {
 
                         </div>
 
-                        <a href={project.link} className='text-[#ACA6A6] text-md mb-14'>View Project{' '}🚀</a>
+                        <a href={project.link} className='text-[#ACA6A6] hover:text-neutral-500 text-md mb-14'>View Project{' '}🚀</a>
                     </div>
                 ))}
             </div>

@@ -6,8 +6,8 @@ import ScrollReveal from './ui/ScrollReveal'
 
 export default function Footer() {
   return (
-    <div className='max-w-6xl mx-auto pt-16 pb-12 sm:px-14 px-5'>
-      <div className='flex flex-col border-[#ececec] shadow-[0_0_40px_rgb(242,242,242)]  border-[0.5px] rounded-2xl py-12 bg-[#1C1C1C] justify-center items-center'>
+    <div className='max-w-6xl border-t-[0.5px] bottom-0 mx-auto mt-24 pb-12 sm:px-14 px-5'>
+      {/* <div className='flex flex-col border-[#ececec] shadow-[0_0_40px_rgb(242,242,242)]  border-[0.5px] rounded-2xl py-12 bg-[#1C1C1C] justify-center items-center'>
         <div className='flex flex-row items-center text-white font-bold text-lg md:text-xl'>
           Let&apos;s get in touch
           <span className="relative ml-3 flex size-3">
@@ -29,6 +29,22 @@ export default function Footer() {
 
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kassimzainab11@gmail.com" target="_blank" rel="noopener noreferrer" className='cursor-pointer'> <h4 className='md:text-sm text-[10px] underline-offset-[0.5px] underline text-white'>kassimzainab11@gmail.com</h4></a>
 
+      </div> */}
+
+      <div className=' flex flex-row items-center text-black justify-between border-t-[0.5px] py-8 border-[#313030]'>
+        <div className=' flex flex-row items-center font-bold text-[10px] sm:text-lg md:text-xl'>
+          Let&apos;s Get In Touch
+          <span className="relative ml-2 sm:ml-3 flex size-2 sm:size-3">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+            <span className="relative inline-flex size-2 sm:size-3 rounded-full bg-green-500"></span>
+          </span>
+        </div>
+        <div className='flex flex-row flex-wrap gap-2 text-[7px] sm:text-sm  items-center'>
+          <a href="https://www.instagram.com/zainab_temi_/"><h2>Instagram .</h2></a>
+          <a href="https://www.linkedin.com/in/zainab-kassim/"><h2>LinkedIn .</h2></a>
+          <a href="https://github.com/zainab-kassim"><h2>Github .</h2></a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kassimzainab11@gmail.com"><h2>Gmail .</h2></a>
+        </div>
       </div>
     </div>
   )
