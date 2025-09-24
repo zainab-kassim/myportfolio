@@ -1,7 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
-import githublogo from '../images/icons/github (3).png'
-import ScrollReveal from './ui/ScrollReveal'
+
 
 
 export default function Footer() {
