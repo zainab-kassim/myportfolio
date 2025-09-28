@@ -96,8 +96,9 @@ export default function Aboutme() {
                                 <div className="py-8 flex-1">
                                     <h2 className="text-[#262626] font-semibold text-xl">What I Do</h2>
                                     <p className="text-md  tracking-wide text-[#717372] pt-2">
-                                   I design and develop full-stack web applications with a strong focus on functionality and user experiences. 
-                                   I also run Zayelle, my fashion brand creating stylish women’s wear.
+                                  I design and develop full-stack web applications with a focus on functionality and great user experiences. 
+                                  Alongside my tech work, I founded Zayelle, a fashion brand where I bring creative ideas to life through 
+                                  elegant women’s wear.
                                     </p>
                                 </div>
                             </div>
@@ -124,8 +125,7 @@ export default function Aboutme() {
                                 <div className="py-8 flex-1">
                                     <h2 className="text-[#262626] font-semibold text-xl">Why I Do It</h2>
                                     <p className="text-md  tracking-wide text-[#717372] pt-2">
-                                      I believe in using creativity and technology to make a meaningful impact. Whether 
-                                      through  responsive websites or scalable web applications.
+                                      Both coding and fashion are ways I use creativity to make meaningful impact, whether through innovative web solutions or timeless designs.
                                     </p>
                                 </div>
                             </div>
