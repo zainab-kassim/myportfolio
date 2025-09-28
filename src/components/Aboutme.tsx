@@ -76,9 +76,8 @@ export default function Aboutme() {
                                 <div className="py-8 flex-1">
                                     <h2 className="text-[#262626] font-semibold text-xl">Who I Am</h2>
                                     <p className="text-md tracking-wide  text-[#717372] pt-2">
-                                       I’m Zainab, a passionate full-stack software engineer and student. 
-                                       Alongside coding, I also run my fashion brand, Zayelle, where I design and create stylish pieces for women.
-                                    </p>
+                                       I&apos;m Zainab, a passionate full-stack software engineer and computer science student 
+                                      </p>
                                 </div>
                             </div>
                         </div>
@@ -97,8 +96,8 @@ export default function Aboutme() {
                                 <div className="py-8 flex-1">
                                     <h2 className="text-[#262626] font-semibold text-xl">What I Do</h2>
                                     <p className="text-md  tracking-wide text-[#717372] pt-2">
-                                      I design and develop full-stack web applications with a strong focus on functionality, performance,
-                                     and seamless user experiences. 
+                                   I design and develop full-stack web applications with a strong focus on functionality and user experiences. 
+                                   I also run Zayelle, my fashion brand creating stylish women’s wear.
                                     </p>
                                 </div>
                             </div>
@@ -126,7 +125,7 @@ export default function Aboutme() {
                                     <h2 className="text-[#262626] font-semibold text-xl">Why I Do It</h2>
                                     <p className="text-md  tracking-wide text-[#717372] pt-2">
                                       I believe in using creativity and technology to make a meaningful impact. Whether 
-                                      through  responsive websites or scalable web applications, I aim to build solutions that empower people.
+                                      through  responsive websites or scalable web applications.
                                     </p>
                                 </div>
                             </div>
