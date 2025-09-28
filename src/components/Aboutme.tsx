@@ -76,9 +76,8 @@ export default function Aboutme() {
                                 <div className="py-8 flex-1">
                                     <h2 className="text-[#262626] font-semibold text-xl">Who I Am</h2>
                                     <p className="text-md tracking-wide  text-[#717372] pt-2">
-                                        I’m Zainab, a passionate full-stack software engineer and student.
-                                        I’m also the founder of Zayelle, a fashion brand creating beautiful,
-                                        stylish pieces for women.
+                                       I’m Zainab, a passionate full-stack software engineer and student. 
+                                       Alongside coding, I also run my fashion brand, Zayelle, where I design and create stylish pieces for women.
                                     </p>
                                 </div>
                             </div>
@@ -98,10 +97,8 @@ export default function Aboutme() {
                                 <div className="py-8 flex-1">
                                     <h2 className="text-[#262626] font-semibold text-xl">What I Do</h2>
                                     <p className="text-md  tracking-wide text-[#717372] pt-2">
-                                        I design and develop full-stack web applications with a focus on
-                                        functionality and great user experiences. Beyond tech, I run Zayelle,
-                                        where I bring my fashion ideas to life through elegant, carefully
-                                        crafted women’s wear.
+                                      I design and develop full-stack web applications with a strong focus on functionality, performance,
+                                     and seamless user experiences. 
                                     </p>
                                 </div>
                             </div>
@@ -128,7 +125,8 @@ export default function Aboutme() {
                                 <div className="py-8 flex-1">
                                     <h2 className="text-[#262626] font-semibold text-xl">Why I Do It</h2>
                                     <p className="text-md  tracking-wide text-[#717372] pt-2">
-                                        I believe in using creativity and technology to make a meaningful impact. Whether through innovative web solutions or timeless fashion, I aim to inspire and empower women to feel confident and capable.
+                                      I believe in using creativity and technology to make a meaningful impact. Whether 
+                                      through  responsive websites or scalable web applications, I aim to build solutions that empower people.
                                     </p>
                                 </div>
                             </div>
