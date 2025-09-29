@@ -76,7 +76,7 @@ export default function Aboutme() {
                                 <div className="py-8 flex-1">
                                     <h2 className="text-[#262626] font-semibold text-xl">Who I Am</h2>
                                     <p className="text-md tracking-wide  text-[#717372] pt-2">
-                                       I&apos;m Zainab, a passionate full-stack software engineer and computer science student 
+                                       I&apos;m Zainab, a passionate full-stack software engineer and computer science student committed to building solutions.
                                       </p>
                                 </div>
                             </div>
@@ -103,13 +103,13 @@ export default function Aboutme() {
                                 </div>
                             </div>
                         </div>
-
+                       
                         <Image
                             width={42}
                             height={42}
                             alt="pacman"
                             src={pacmanpng}
-                            className="hidden md:block absolute md:top-[60.3%] lg:top-[61.5%] -translate-x-1/4 -translate-y-1/2 z-10"
+                            className="hidden lg:block pacman absolute md:top-[60.3%] lg:top-[61.5%] -translate-x-1/4 -translate-y-1/2 z-10"
                         />
                         {/* Card 3 */}
                         <div className="border border-[#ececec] shadow-[0_0_40px_rgb(242,242,242)]  rounded-xl px-4 py-3 flex flex-col">

@@ -36,59 +36,24 @@ body {
   font-family: 'Euclid Circular', sans-serif;
 }
 
-.custom-md-shadow {
-  box-shadow: 0px 0px 5px 5px #FF3838;
+@keyframes pacman-move {
+  0%   { transform: translateX(0) scaleX(1); }     /* start normal, facing right */
+  50%  { transform: translateX(1000px) scaleX(1); } /* move right */
+  51%  { transform: translateX(1000px) scaleX(-1);} /* flip Pac-Man to face left */
+  100% { transform: translateX(0) scaleX(-1); }    /* move back left */
 }
 
-.custom-md-herosec{
-   box-shadow: 0px 0px 4px 0px #c4c1c4;
+.pacman {
+  animation: pacman-move 28s linear infinite;
 }
+/* 
+button {
+  background: #111;
+  border: 2px solid rgb(221, 221, 221)fff;
+  box-shadow: 0 0 10px #fafcfb, 0 0 20px #787877;
+  transition: box-shadow 0.3s, color 0.3s;
+} */
 
-.custom-dot1{
-   box-shadow: 0px 0px 8px 3px #ed4a4a;
-}
-
-.custom-dot2{
-   box-shadow: 0px 0px 8px 3px #5666b1;
-}
-
-.custom-dot3{
-   box-shadow: 0px 0px 8px 3px #42e686;
-}
-
-
-.custom-icon1{
-   box-shadow: 0px 0px 8px 3px #3791FF;
-}
-
-.custom-icon2{
-   box-shadow: 0px 0px 8px 3px #FFFFFF;
-}
-
-.custom-icon3{
-   box-shadow: 0px 0px 8px 3px #430090;
-}
-
-.shadow-text{
-  text-shadow: 5px 5px 4px 8px rgba(255, 254, 254, 0.5);
-}
-
-@keyframes wave {
-  0% { transform: rotate(0deg); }
-  15% { transform: rotate(14deg); }
-  30% { transform: rotate(-8deg); }
-  40% { transform: rotate(14deg); }
-  50% { transform: rotate(-4deg); }
-  60% { transform: rotate(10deg); }
-  70% { transform: rotate(0deg); }
-  100% { transform: rotate(0deg); }
-}
-
-.waving-hand {
-  display: inline-block;
-  transform-origin: 70% 70%;
-  animation: wave 2s infinite;
-}
 
 /* any global CSS file loaded after the plugin */
 @layer utilities {
