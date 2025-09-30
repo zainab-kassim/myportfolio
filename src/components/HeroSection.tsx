@@ -9,8 +9,8 @@ export default function HeroSection() {
     <>
       <div className='sm:px-14 px-5 sticky top-8 z-20 '>
         <div className='flex  mx-auto max-w-sm sm:max-w-3xl sm:justify-between justify-center  justify-items-center px-3   sm:px-5 items-center bg-[#121212]/67  border-[0.5px] inset-shadow-sm shadow-xl/30 backdrop-blur-3xl  border-[#8f8f8f4c] py-2 rounded-full '>
-          <a href="/"><Image height={40} width={40} className='w-8 h-8 sm:flex hidden' alt='logo' src='https://img.icons8.com/?size=100&id=a1I0W_J1dvei&format=png&color=ffffff' />
-          <div className='flex flex-row lg:gap-12 md:gap-9 gap-6  justify-center  text-white tracking-wide items-center lg:text-[13px] text-sm'></a>
+          <a href="/"><Image height={40} width={40} className='w-8 h-8 sm:flex hidden' alt='logo' src='https://img.icons8.com/?size=100&id=a1I0W_J1dvei&format=png&color=ffffff' /></a>
+          <div className='flex flex-row lg:gap-12 md:gap-9 gap-6  justify-center  text-white tracking-wide items-center lg:text-[13px] text-sm'>
             <div><a href="#Projects">Projects</a></div>
             <div><a href="#Aboutme">About</a></div>
             <a href="https://docs.google.com/document/d/1lVQgfJbiybqjRakxfJUksAl2DdnFSI1YKD6itd8YFQM/edit?usp=sharing" target='_blank'>
