@@ -13,7 +13,7 @@ export default function Footer() {
             <span className="relative inline-flex size-2 sm:size-3 rounded-full bg-green-500"></span>
           </span>
         </div>
-        <div className='flex flex-row flex-wrap gap-1 sm:gap-2 text-md sm:text-sm  items-center'>
+        <div className='flex flex-row flex-wrap gap-1 sm:gap-2 text-[14px] sm:text-sm  items-center'>
           <a href="https://www.instagram.com/zainab_temi_/" target='_blank' className='cursor-pointer hover:text-gray-800 hover:underline '><h2>Instagram .</h2></a>
           <a href="https://www.linkedin.com/in/zainab-kassim/"  target='_blank' className='cursor-pointer hover:text-gray-800 hover:underline '><h2>LinkedIn .</h2></a>
           <a href="https://github.com/zainab-kassim"  target='_blank' className='cursor-pointer hover:text-gray-800 hover:underline '><h2>Github .</h2></a>
