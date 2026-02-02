@@ -15,7 +15,7 @@ export default function HeroSection() {
           <div className='flex flex-row lg:gap-12 md:gap-9 gap-6  justify-center  text-white tracking-wide items-center lg:text-[13px] text-sm'>
             <div><a href="#Projects">Projects</a></div>
             <div><a href="#Aboutme">About</a></div>
-            <a href="https://docs.google.com/document/d/e/2PACX-1vSJfev10JChQSWbpyh1ZTYxOkW3ZaJ_pzPHOfXRY5V_SO0JyY0QJ4OdNmCwYoEi2n-HDIGx_4Xm2399/pub" target='_blank'>
+            <a href="https://docs.google.com/document/d/11y7HC65kxaP5NEw_uptxc9U-Td4Uf2MkB9OAuz6y55o/edit?usp=sharing" target='_blank'>
               <div className="p-[0.5px] bg-white rounded-3xl cursor-pointer shadow-[0_0_7px_rgba(225,225,225,0.8)]">
                 <div className="rounded-full py-2 px-4 md:py-3 md:px-6 text-black   backdrop-blur-2xl">
                   Resume
