@@ -31,7 +31,7 @@ export default function HeroSection() {
         <Image height={170} width={170} className='animate-fade-in-up w-21 h-21 ' quality={100} alt='memoji' src={memoji} />
         <div className='text-center text-white animate-fade-in-up font-bold font-sans mt-2  text-xl md:text-3xl lg:text-[41px]'>
           <h2 className='flex'>Zainab is a Software Developer </h2>
-          <h2 className=''>From Lagos, <span className='text-green-700'>Nig</span>e<span className='text-green-700'>ria</span></h2>
+          <h2 className=''>Based in Ottawa, <span className='text-red-700'>Ca</span>na<span className='text-red-700'>da</span></h2>
         </div>
 
         <ScrollReveal animation='animate-expand-horizontally'>
