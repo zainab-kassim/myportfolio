@@ -86,7 +86,7 @@ export default function HeroSection() {
       </div>
 
 
-      <div className='relative flex flex-col sm:px-14 px-5 justify-center items-center mx-auto max-w-5xl mt-16 sm:mt-24 pt-24 pb-20 md:pt-28 md:pb-20'>
+      <div className='relative flex flex-col sm:px-14 px-5 justify-center items-center mx-auto max-w-5xl mt-20 sm:mt-24 pt-24 pb-20 md:pt-28 md:pb-20'>
         {tiles.map((tile) => (
           <div
             key={tile.label}
