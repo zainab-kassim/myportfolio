@@ -35,6 +35,11 @@ const tiles: Tile[] = [
 ]
 
 
+const navLinks = [
+  { label: 'Projects', href: '#Projects', dot: 'bg-[#7C5CFF]' },
+  { label: 'About', href: '#Aboutme', dot: 'bg-[#F472B6]' },
+]
+
 const socials = [
   { label: 'X (Twitter)', href: 'https://x.com/TemiDevtips', icon: 'https://img.icons8.com/?size=100&id=A4DsujzAX4rw&format=png&color=ffffff', bg: 'bg-[#262626]', rotate: '-rotate-6' },
   { label: 'GitHub', href: 'https://github.com/zainab-kassim', icon: githublogo, bg: 'bg-[#7C5CFF]', rotate: 'rotate-3' },
@@ -53,21 +58,31 @@ export default function HeroSection() {
         <div className='absolute top-72 left-1/2 translate-x-[10%] w-80 h-80 rounded-full bg-white/[0.05] blur-3xl' />
       </div>
 
-      <div className='sm:px-14 px-5 sticky top-8 z-20 '>
-        <div className='flex  mx-auto max-w-sm sm:max-w-3xl sm:justify-between justify-center  justify-items-center px-3   sm:px-5 items-center bg-[#121212]/67  border-[0.5px] inset-shadow-sm shadow-xl/30 backdrop-blur-3xl  border-[#8f8f8f4c] py-2 rounded-full '>
-          <Link href="/"><Image height={40} width={40} className='w-8 h-8 sm:flex hidden' alt='logo png' src='https://img.icons8.com/?size=100&id=a1I0W_J1dvei&format=png&color=ffffff' /></Link>
-          <div className='flex flex-row lg:gap-12 md:gap-9 gap-6  justify-center  text-white tracking-wide items-center lg:text-[13px] text-sm'>
-            <div><a href="#Projects">Projects</a></div>
-            <div><a href="#Aboutme">About</a></div>
-            <a href="https://docs.google.com/document/d/11y7HC65kxaP5NEw_uptxc9U-Td4Uf2MkB9OAuz6y55o/edit?usp=sharing" target='_blank'>
-              <div className="p-[0.5px] bg-white rounded-3xl cursor-pointer shadow-[0_0_7px_rgba(225,225,225,0.8)]">
-                <div className="rounded-full py-2 px-4 md:py-3 md:px-6 text-black   backdrop-blur-2xl">
-                  Resume
-                </div>
-              </div>
+      <div className='sm:px-14 px-5 sticky top-6 z-20'>
+        <nav className='flex mx-auto max-w-md sm:max-w-3xl justify-between items-center pl-4 pr-2 sm:pl-5 py-2 bg-[#141414]/70 border border-white/10 shadow-xl/30 backdrop-blur-2xl rounded-full'>
+          <Link href="/" aria-label='Zainab Kassim, home' className='flex transition-transform duration-300 hover:-rotate-6 hover:scale-110'>
+            {/* ZK monogram: chunky rounded strokes to match the photo blob, with an orange leg on the K */}
+            <svg viewBox='0 0 46 32' className='h-7 sm:h-8 w-auto' aria-hidden='true'>
+              <g fill='none' stroke='white' strokeWidth='5' strokeLinecap='round' strokeLinejoin='round'>
+                <path d='M5 7 H17 Q20 7 18.4 9.6 L7.6 22.4 Q6 25 9 25 H21' />
+                <path d='M27 7 V25' />
+                <path d='M39 7 Q34 12 28.5 16' />
+                <path d='M31.5 15.5 Q36 19 40 25' stroke='#FF8B42' />
+              </g>
+            </svg>
+          </Link>
+          <div className='flex items-center gap-1 sm:gap-2 text-sm text-white/80'>
+            {navLinks.map((link) => (
+              <a key={link.href} href={link.href} className='group flex items-center gap-1.5 rounded-full px-3 sm:px-4 py-2 transition-colors duration-300 hover:bg-white/10 hover:text-white'>
+                <span className={`w-1.5 h-1.5 rounded-full ${link.dot} scale-0 transition-transform duration-300 group-hover:scale-100`} aria-hidden='true' />
+                {link.label}
+              </a>
+            ))}
+            <a href="https://docs.google.com/document/d/11y7HC65kxaP5NEw_uptxc9U-Td4Uf2MkB9OAuz6y55o/edit?usp=sharing" target='_blank' rel='noopener noreferrer' className='ml-1 flex items-center gap-1 rounded-full bg-[#262626] hover:bg-[#2f2f2f] text-white font-medium px-4 sm:px-5 py-2 sm:py-2.5 border border-white/15 shadow-[3px_3px_0_rgba(0,0,0,0.55)] transition-colors duration-300'>
+              Resume <span aria-hidden='true'>↗</span>
             </a>
           </div>
-        </div>
+        </nav>
       </div>
 
 
