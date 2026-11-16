@@ -67,3 +67,33 @@ button {
 
 
 
+
+/* hero floating tiles: outer element bobs, inner tile keeps its tilt */
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-14px); }
+}
+
+.hero-float {
+  animation: hero-float 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-float { animation: none; }
+}
+
+/* organic blob shape that slowly morphs (photo frame and some tiles) */
+@keyframes hero-blob {
+  0%, 100% { border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%; }
+  50%      { border-radius: 58% 42% 38% 62% / 55% 38% 62% 45%; }
+}
+
+.hero-blob {
+  border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%;
+  animation: hero-blob 8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-blob { animation: none; }
+}
+

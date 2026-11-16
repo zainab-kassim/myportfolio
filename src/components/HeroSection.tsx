@@ -4,6 +4,34 @@ import githublogo from '../images/icons/github (3).png'
 import memoji from '../images/icons/Me-moji.png'
 import ScrollReveal from './ui/ScrollReveal'
 import Link from 'next/link'
+import { BotAvatar } from './ui/Avatars'
+
+type Tile = {
+  content: React.ReactNode
+  label: string
+  bg: string
+  rotate: string
+  position: string
+  size: string
+  shape: string
+  delay: string
+  hideOnMobile?: boolean
+}
+
+// Tiles floating around the headline. `position` is relative to the hero
+// container, `shape` mixes circles and blobs to echo the photo, and `delay`
+// staggers the bobbing so the tiles don't move in sync.
+const tiles: Tile[] = [
+  { content: <Image src={memoji} alt='' className='w-[85%] h-[85%] object-contain mt-2' />, label: 'Zainab memoji', shape: 'rounded-[42%_58%_63%_37%/41%_44%_56%_59%]', bg: 'bg-[#FFB86B]', rotate: '-rotate-8', position: 'left-[4%] top-[6%] md:left-[5%] md:top-[14%]', size: 'w-14 h-14 md:w-20 md:h-20', delay: '0s' },
+  { content: '🐈', label: 'cat', shape: 'rounded-full', bg: 'bg-[#7C5CFF]', rotate: 'rotate-12', position: 'left-[30%] top-[1%]', size: 'w-12 h-12', delay: '1.2s', hideOnMobile: true },
+  { content: '😴', label: 'sleeping', shape: 'hero-blob', bg: 'bg-[#2563EB]', rotate: '-rotate-6', position: 'right-[26%] top-0 md:right-[28%] md:top-[4%]', size: 'w-11 h-11 md:w-14 md:h-14', delay: '2.1s' },
+  { content: <BotAvatar />, label: 'robot avatar', shape: 'rounded-[38%]', bg: 'bg-[#A7F3D0]', rotate: 'rotate-6', position: 'right-[4%] top-[10%] md:right-[4%] md:top-[20%]', size: 'w-14 h-14 md:w-[72px] md:h-[72px]', delay: '0.6s' },
+  { content: '☕', label: 'coffee', shape: 'rounded-[60%_40%_30%_70%/60%_30%_70%_40%]', bg: 'bg-[#FF8B42]', rotate: '-rotate-12', position: 'left-[15%] top-[42%]', size: 'w-14 h-14', delay: '1.7s', hideOnMobile: true },
+  { content: '🎨', label: 'palette', shape: 'rounded-[50%_50%_50%_50%/60%_60%_40%_40%]', bg: 'bg-[#F472B6]', rotate: 'rotate-12', position: 'right-[16%] top-[46%]', size: 'w-16 h-16', delay: '2.6s', hideOnMobile: true },
+  { content: '📖', label: 'reading', shape: 'hero-blob', bg: 'bg-[#7DD3FC]', rotate: '-rotate-6', position: 'left-[8%] bottom-[8%] md:left-[3%] md:bottom-[16%]', size: 'w-14 h-14 md:w-[76px] md:h-[76px]', delay: '0.9s' },
+  { content: '🧵', label: 'sewing thread', shape: 'rounded-full', bg: 'bg-[#FACC15]', rotate: 'rotate-6', position: 'left-[27%] bottom-[2%]', size: 'w-11 h-11', delay: '2.4s', hideOnMobile: true },
+  { content: '🛼', label: 'roller skate', shape: 'rounded-[70%_16px_70%_16px]', bg: 'bg-[#312E81]', rotate: '-rotate-3', position: 'right-[10%] bottom-[4%] md:right-[5%] md:bottom-[12%]', size: 'w-12 h-12 md:w-16 md:h-16', delay: '1.4s' },
+]
 
 
 export default function HeroSection() {
@@ -27,15 +55,32 @@ export default function HeroSection() {
       </div>
 
 
-      <div className='flex flex-col sm:px-14 px-5  justify-center items-center mb-20 pt-5 mt-24 sm:mt-36'>
+      <div className='relative flex flex-col sm:px-14 px-5 justify-center items-center mx-auto max-w-5xl mt-16 sm:mt-24 pt-24 pb-20 md:pt-28 md:pb-20'>
+        {tiles.map((tile) => (
+          <div
+            key={tile.label}
+            className={`hero-float absolute ${tile.position} ${tile.hideOnMobile ? 'hidden md:block' : ''}`}
+            style={{ animationDelay: tile.delay }}
+          >
+            <div
+              role='img'
+              aria-label={tile.label}
+              className={`${tile.size} ${tile.bg} ${tile.rotate} ${tile.shape} flex items-center justify-center overflow-hidden border-2 border-white/15 shadow-[5px_5px_0_rgba(0,0,0,0.55)] text-2xl md:text-3xl select-none transition-transform duration-300 hover:rotate-0 hover:scale-110`}
+            >
+              {tile.content}
+            </div>
+          </div>
+        ))}
+
         <Image height={170} width={170} className='animate-fade-in-up w-21 h-21 ' quality={100} alt='memoji' src={memoji} />
+
         <div className='text-center text-white animate-fade-in-up font-bold font-sans mt-2  text-xl md:text-3xl lg:text-[41px]'>
           <h2 className='flex'>Zainab is a Software Developer </h2>
           <h2 className=''>Based in Ottawa, <span className='text-red-700'>Ca</span>na<span className='text-red-700'>da</span></h2>
         </div>
 
         <ScrollReveal animation='animate-expand-horizontally'>
-          <div className='flex justify-items-center mt-5 gap-1 sm:gap-3 relative mb-12  '>
+          <div className='flex justify-items-center mt-5 gap-1 sm:gap-3 relative mb-4 '>
             <a href="https://x.com/TemiDevtips" target='_blank' className='cursor-pointer'><Image height={70} width={70} className='bg-[#292929] hover:bg-white/30 hover:border-white hover:scale-110 transition-transform object-contain duration-300 hover:-translate-y-2  hover:border-[2px]  sm:w-14 sm:h-12 w-12 h-10 rounded-md px-4 py-3 -rotate-6 top-1 relative' alt='twitter logo' src='https://img.icons8.com/?size=100&id=A4DsujzAX4rw&format=png&color=ffffff' /></a>
             <a href="https://github.com/zainab-kassim" target='_blank' className='cursor-pointer'><Image height={70} width={70} className='bg-[#292929] hover:bg-white/30 hover:border-white hover:scale-110 object-contain    transition-transform duration-300 hover:-translate-y-2 hover:border-[2px] sm:w-14 sm:h-12 w-12 h-10 rounded-md px-4 py-3 -rotate-2 top-1' alt='githublogo' src={githublogo} /></a>
             <a href="https://www.linkedin.com/in/zainab-kassim/" target='_blank' className='cursor-pointer'><Image height={70} width={70} className='bg-[#292929] hover:bg-white/30 hover:border-white hover:scale-110    transition-transform object-contain duration-300 hover:-translate-y-2 hover:border-[2px] sm:w-15 sm:h-12 w-12 h-10 rounded-md px-4 py-3 ' alt='linkedinlogo' src='https://img.icons8.com/?size=100&id=2EqeH19eMd3a&format=png&color=ffffff' /></a>
