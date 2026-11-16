@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import githublogo from '../images/icons/github (3).png'
 import memoji from '../images/icons/Me-moji.png'
+import photo from '../images/zainab.jpg'
 import ScrollReveal from './ui/ScrollReveal'
 import Link from 'next/link'
 import { BotAvatar } from './ui/Avatars'
@@ -87,7 +88,13 @@ export default function HeroSection() {
           </div>
         ))}
 
-        <Image height={170} width={170} className='animate-fade-in-up w-21 h-21 ' quality={100} alt='memoji' src={memoji} />
+        <div className='relative animate-fade-in-up'>
+          <div className='hero-blob w-28 h-28 md:w-36 md:h-36 overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.5)]'>
+            <Image src={photo} alt='Zainab Kassim' quality={90} priority className='hero-blob w-full h-full object-cover object-[50%_30%]' />
+          </div>
+          <span className='absolute top-1 -left-12 md:-left-10 -rotate-6 z-10 bg-white text-black text-xs md:text-sm font-medium rounded-full px-3 py-1 shadow-lg whitespace-nowrap'>hi there 👋</span>
+          <span className='absolute bottom-3 right-3 w-4 h-4 rounded-full bg-[#34D399] border-2 border-[#1a1a1a]' />
+        </div>
 
         <div className='flex flex-col items-center text-center text-white animate-fade-in-up font-sans mt-7 relative z-10'>
           <h1 className='font-extrabold tracking-tight leading-[1.1] text-2xl md:text-3xl lg:text-[36px]'>
