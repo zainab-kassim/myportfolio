@@ -34,6 +34,14 @@ const tiles: Tile[] = [
 ]
 
 
+const socials = [
+  { label: 'X (Twitter)', href: 'https://x.com/TemiDevtips', icon: 'https://img.icons8.com/?size=100&id=A4DsujzAX4rw&format=png&color=ffffff', bg: 'bg-[#262626]', rotate: '-rotate-6' },
+  { label: 'GitHub', href: 'https://github.com/zainab-kassim', icon: githublogo, bg: 'bg-[#7C5CFF]', rotate: 'rotate-3' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/zainab-kassim/', icon: 'https://img.icons8.com/?size=100&id=2EqeH19eMd3a&format=png&color=ffffff', bg: 'bg-[#2563EB]', rotate: '-rotate-2' },
+  { label: 'Email', href: 'https://mail.google.com/mail/?view=cm&fs=1&to=kassimzainab11@gmail.com&su=Hello%20Temi&body=I%20would%20like%20to%20get%20in%20touch%20with%20you.', icon: 'https://img.icons8.com/?size=100&id=Y2GfpkgYNp42&format=png&color=ffffff', bg: 'bg-[#FF8B42]', rotate: 'rotate-6' },
+  { label: 'Instagram', href: 'https://www.instagram.com/zainab_temi_/', icon: 'https://img.icons8.com/?size=100&id=32320&format=png&color=FFFFFF', bg: 'bg-[#F472B6]', rotate: '-rotate-3' },
+]
+
 export default function HeroSection() {
   return (
     <>
@@ -81,19 +89,33 @@ export default function HeroSection() {
 
         <Image height={170} width={170} className='animate-fade-in-up w-21 h-21 ' quality={100} alt='memoji' src={memoji} />
 
-        <div className='text-center text-white animate-fade-in-up font-bold font-sans mt-2  text-xl md:text-3xl lg:text-[41px]'>
-          <h2 className='flex'>Zainab is a Software Developer </h2>
-          <h2 className=''>Based in Ottawa, <span className='text-red-700'>Ca</span>na<span className='text-red-700'>da</span></h2>
+        <div className='flex flex-col items-center text-center text-white animate-fade-in-up font-sans mt-7 relative z-10'>
+          <h1 className='font-extrabold tracking-tight leading-[1.1] text-2xl md:text-3xl lg:text-[36px]'>
+            Zainab is a<br />
+            <span className='relative inline-block'>
+              Software Developer
+              {/* hand-drawn squiggle under the role */}
+              <svg viewBox='0 0 300 12' preserveAspectRatio='none' className='absolute left-0 -bottom-2 md:-bottom-3 w-full h-2.5 md:h-3.5' aria-hidden='true'>
+                <path d='M3 8 Q 20 2 37 7 T 75 7 T 112 7 T 150 7 T 187 7 T 225 7 T 262 7 T 297 6' fill='none' stroke='#FF8B42' strokeWidth='4' strokeLinecap='round' />
+              </svg>
+            </span>
+          </h1>
+          <p className='mt-6 inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-1.5 text-sm text-white/80'>
+            <span aria-hidden='true'>📍</span>
+            Based in Ottawa, <span className='-ml-1'><span className='text-red-500'>Ca</span>na<span className='text-red-500'>da</span></span>
+          </p>
         </div>
 
         <ScrollReveal animation='animate-expand-horizontally'>
-          <div className='flex justify-items-center mt-5 gap-1 sm:gap-3 relative mb-4 '>
-            <a href="https://x.com/TemiDevtips" target='_blank' className='cursor-pointer'><Image height={70} width={70} className='bg-[#292929] hover:bg-white/30 hover:border-white hover:scale-110 transition-transform object-contain duration-300 hover:-translate-y-2  hover:border-[2px]  sm:w-14 sm:h-12 w-12 h-10 rounded-md px-4 py-3 -rotate-6 top-1 relative' alt='twitter logo' src='https://img.icons8.com/?size=100&id=A4DsujzAX4rw&format=png&color=ffffff' /></a>
-            <a href="https://github.com/zainab-kassim" target='_blank' className='cursor-pointer'><Image height={70} width={70} className='bg-[#292929] hover:bg-white/30 hover:border-white hover:scale-110 object-contain    transition-transform duration-300 hover:-translate-y-2 hover:border-[2px] sm:w-14 sm:h-12 w-12 h-10 rounded-md px-4 py-3 -rotate-2 top-1' alt='githublogo' src={githublogo} /></a>
-            <a href="https://www.linkedin.com/in/zainab-kassim/" target='_blank' className='cursor-pointer'><Image height={70} width={70} className='bg-[#292929] hover:bg-white/30 hover:border-white hover:scale-110    transition-transform object-contain duration-300 hover:-translate-y-2 hover:border-[2px] sm:w-15 sm:h-12 w-12 h-10 rounded-md px-4 py-3 ' alt='linkedinlogo' src='https://img.icons8.com/?size=100&id=2EqeH19eMd3a&format=png&color=ffffff' /></a>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kassimzainab11@gmail.com&su=Hello%20Temi&body=I%20would%20like%20to%20get%20in%20touch%20with%20you." target="_blank" rel="noopener noreferrer"><Image height={70} width={70} className='bg-[#292929] hover:bg-white/30 hover:border-white hover:scale-110  object-contain  transition-transform duration-300 hover:-translate-y-2 hover:border-[2px] sm:w-14 sm:h-12 w-12 h-10 rounded-md px-4 py-3 top-1 rotate-3' alt='maillogo' src='https://img.icons8.com/?size=100&id=Y2GfpkgYNp42&format=png&color=ffffff' /></a>
-            <a href="https://www.instagram.com/zainab_temi_/" target='_blank' className='cursor-pointer'><Image height={80} width={80} className='bg-[#292929] hover:bg-white/30 hover:border-white hover:scale-110 object-contain   transition-transform duration-300 hover:-translate-y-2 hover:border-[2px] sm:w-15 sm:h-12 w-12 h-10 rounded-md px-4 py-3 rotate-6 relative top-1 ' alt='instagram logo' src='https://img.icons8.com/?size=100&id=32320&format=png&color=FFFFFF' /></a>  
-          </div> 
+          <div className='flex justify-center mt-7 gap-3 relative mb-4'>
+            {socials.map((social) => (
+              <a key={social.label} href={social.href} target='_blank' rel='noopener noreferrer' aria-label={social.label} title={social.label}>
+                <span className={`${social.bg} ${social.rotate} flex items-center justify-center w-12 h-12 rounded-xl border-2 border-white/15 shadow-[4px_4px_0_rgba(0,0,0,0.55)] transition-transform duration-300 hover:rotate-0 hover:-translate-y-1.5 hover:scale-110`}>
+                  <Image height={70} width={70} className='w-5 h-5 object-contain' alt='' src={social.icon} />
+                </span>
+              </a>
+            ))}
+          </div>
         </ScrollReveal>
 
         
