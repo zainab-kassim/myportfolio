@@ -37,6 +37,13 @@ const tiles: Tile[] = [
 export default function HeroSection() {
   return (
     <>
+      {/* background: dotted grid plus soft white glows, clipped so it can't cause sideways scroll */}
+      <div className='absolute inset-x-0 top-0 h-[1000px] overflow-hidden pointer-events-none' aria-hidden='true'>
+        <div className='hero-pattern absolute inset-0' />
+        <div className='absolute top-40 left-1/2 -translate-x-[110%] w-80 h-80 rounded-full bg-white/[0.07] blur-3xl' />
+        <div className='absolute top-72 left-1/2 translate-x-[10%] w-80 h-80 rounded-full bg-white/[0.05] blur-3xl' />
+      </div>
+
       <div className='sm:px-14 px-5 sticky top-8 z-20 '>
         <div className='flex  mx-auto max-w-sm sm:max-w-3xl sm:justify-between justify-center  justify-items-center px-3   sm:px-5 items-center bg-[#121212]/67  border-[0.5px] inset-shadow-sm shadow-xl/30 backdrop-blur-3xl  border-[#8f8f8f4c] py-2 rounded-full '>
           <Link href="/"><Image height={40} width={40} className='w-8 h-8 sm:flex hidden' alt='logo png' src='https://img.icons8.com/?size=100&id=a1I0W_J1dvei&format=png&color=ffffff' /></Link>
