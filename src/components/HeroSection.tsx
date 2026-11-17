@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import githublogo from '../images/icons/github (3).png'
-import memoji from '../images/icons/Me-moji.png'
 import photo from '../images/zainab.jpg'
 import ScrollReveal from './ui/ScrollReveal'
 import Link from 'next/link'
@@ -23,7 +22,6 @@ type Tile = {
 // container, `shape` mixes circles and blobs to echo the photo, and `delay`
 // staggers the bobbing so the tiles don't move in sync.
 const tiles: Tile[] = [
-  { content: <Image src={memoji} alt='' className='w-[85%] h-[85%] object-contain mt-2' />, label: 'Zainab memoji', shape: 'rounded-[42%_58%_63%_37%/41%_44%_56%_59%]', bg: 'bg-[#FFB86B]', rotate: '-rotate-8', position: 'left-[4%] top-[6%] md:left-[5%] md:top-[14%]', size: 'w-14 h-14 md:w-20 md:h-20', delay: '0s' },
   { content: '🐈', label: 'cat', shape: 'rounded-full', bg: 'bg-[#7C5CFF]', rotate: 'rotate-12', position: 'left-[30%] top-[1%]', size: 'w-12 h-12', delay: '1.2s', hideOnMobile: true },
   { content: '😴', label: 'sleeping', shape: 'hero-blob', bg: 'bg-[#2563EB]', rotate: '-rotate-6', position: 'right-[26%] top-0 md:right-[28%] md:top-[4%]', size: 'w-11 h-11 md:w-14 md:h-14', delay: '2.1s' },
   { content: <BotAvatar />, label: 'robot avatar', shape: 'rounded-[38%]', bg: 'bg-[#A7F3D0]', rotate: 'rotate-6', position: 'right-[4%] top-[10%] md:right-[4%] md:top-[20%]', size: 'w-14 h-14 md:w-[72px] md:h-[72px]', delay: '0.6s' },
