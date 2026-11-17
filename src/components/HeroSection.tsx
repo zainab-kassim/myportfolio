@@ -112,17 +112,17 @@ export default function HeroSection() {
         </div>
 
         <div className='flex flex-col items-center text-center text-white animate-fade-in-up font-sans mt-7 relative z-10'>
-          <h1 className='font-extrabold tracking-tight leading-[1.1] text-2xl md:text-3xl lg:text-[36px]'>
+          <h1 className='font-extrabold tracking-tight leading-[1.1] text-2xl md:text-[28px] lg:text-[32px]'>
             Zainab is a<br />
             <span className='relative inline-block'>
               Software Developer
               {/* hand-drawn squiggle under the role */}
-              <svg viewBox='0 0 300 12' preserveAspectRatio='none' className='absolute left-0 -bottom-2 md:-bottom-3 w-full h-2.5 md:h-3.5' aria-hidden='true'>
+              <svg viewBox='0 0 300 12' preserveAspectRatio='none' className='absolute left-0 -bottom-2 w-full h-2.5' aria-hidden='true'>
                 <path d='M3 8 Q 20 2 37 7 T 75 7 T 112 7 T 150 7 T 187 7 T 225 7 T 262 7 T 297 6' fill='none' stroke='#FF8B42' strokeWidth='4' strokeLinecap='round' />
               </svg>
             </span>
           </h1>
-          <p className='mt-6 inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-1.5 text-sm text-white/80'>
+          <p className='mt-6 md:mt-9 inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-1.5 text-sm text-white/80'>
             <span aria-hidden='true'>📍</span>
             Based in Ottawa, <span className='-ml-1'><span className='text-red-500'>Ca</span>na<span className='text-red-500'>da</span></span>
           </p>
@@ -132,7 +132,7 @@ export default function HeroSection() {
           <div className='flex justify-center mt-7 gap-3 relative mb-4'>
             {socials.map((social) => (
               <a key={social.label} href={social.href} target='_blank' rel='noopener noreferrer' aria-label={social.label} title={social.label}>
-                <span className={`${social.bg} ${social.rotate} flex items-center justify-center w-12 h-12 rounded-xl border-2 border-white/15 shadow-[4px_4px_0_rgba(0,0,0,0.55)] transition-transform duration-300 hover:rotate-0 hover:-translate-y-1.5 hover:scale-110`}>
+                <span className={`${social.bg} ${social.rotate} flex items-center justify-center w-12 h-12 rounded-xl border border-white/10 shadow-[0_8px_18px_-6px_rgba(0,0,0,0.6)] transition-transform duration-300 hover:rotate-0 hover:-translate-y-1.5 hover:scale-110`}>
                   <Image height={70} width={70} className='w-5 h-5 object-contain' alt='' src={social.icon} />
                 </span>
               </a>
