@@ -96,7 +96,7 @@ export default function HeroSection() {
             <div
               role='img'
               aria-label={tile.label}
-              className={`${tile.size} ${tile.bg} ${tile.rotate} ${tile.shape} flex items-center justify-center overflow-hidden border-2 border-white/15 shadow-[5px_5px_0_rgba(0,0,0,0.55)] text-2xl md:text-3xl select-none transition-transform duration-300 hover:rotate-0 hover:scale-110`}
+              className={`${tile.size} ${tile.bg} ${tile.rotate} ${tile.shape} flex items-center justify-center overflow-hidden soft-lift text-2xl md:text-3xl select-none transition-transform duration-300 hover:rotate-0 hover:scale-110`}
             >
               {tile.content}
             </div>
