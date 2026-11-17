@@ -22,14 +22,14 @@ type Tile = {
 // container, `shape` mixes circles and blobs to echo the photo, and `delay`
 // staggers the bobbing so the tiles don't move in sync.
 const tiles: Tile[] = [
-  { content: '🐈', label: 'cat', shape: 'rounded-full', bg: 'bg-[#7C5CFF]', rotate: 'rotate-12', position: 'left-[30%] top-[1%]', size: 'w-12 h-12', delay: '1.2s', hideOnMobile: true },
-  { content: '😴', label: 'sleeping', shape: 'hero-blob', bg: 'bg-[#2563EB]', rotate: '-rotate-6', position: 'right-[26%] top-0 md:right-[28%] md:top-[4%]', size: 'w-11 h-11 md:w-14 md:h-14', delay: '2.1s' },
-  { content: <BotAvatar />, label: 'robot avatar', shape: 'rounded-[38%]', bg: 'bg-[#A7F3D0]', rotate: 'rotate-6', position: 'right-[4%] top-[10%] md:right-[4%] md:top-[20%]', size: 'w-14 h-14 md:w-[72px] md:h-[72px]', delay: '0.6s' },
-  { content: '☕', label: 'coffee', shape: 'rounded-[60%_40%_30%_70%/60%_30%_70%_40%]', bg: 'bg-[#FF8B42]', rotate: '-rotate-12', position: 'left-[15%] top-[42%]', size: 'w-14 h-14', delay: '1.7s', hideOnMobile: true },
-  { content: '🎨', label: 'palette', shape: 'rounded-[50%_50%_50%_50%/60%_60%_40%_40%]', bg: 'bg-[#F472B6]', rotate: 'rotate-12', position: 'right-[16%] top-[46%]', size: 'w-16 h-16', delay: '2.6s', hideOnMobile: true },
-  { content: '📖', label: 'reading', shape: 'hero-blob', bg: 'bg-[#7DD3FC]', rotate: '-rotate-6', position: 'left-[8%] bottom-[8%] md:left-[3%] md:bottom-[16%]', size: 'w-14 h-14 md:w-[76px] md:h-[76px]', delay: '0.9s' },
-  { content: '🧵', label: 'sewing thread', shape: 'rounded-full', bg: 'bg-[#FACC15]', rotate: 'rotate-6', position: 'left-[27%] bottom-[2%]', size: 'w-11 h-11', delay: '2.4s', hideOnMobile: true },
-  { content: '🛼', label: 'roller skate', shape: 'rounded-[70%_16px_70%_16px]', bg: 'bg-[#312E81]', rotate: '-rotate-3', position: 'right-[10%] bottom-[4%] md:right-[5%] md:bottom-[12%]', size: 'w-12 h-12 md:w-16 md:h-16', delay: '1.4s' },
+  { content: '🐈', label: 'cat', shape: 'rounded-full', bg: 'bg-[#7C5CFF]', rotate: '-rotate-8', position: 'left-[4%] top-[6%] md:left-[7%] md:top-[10%]', size: 'w-14 h-14 md:w-[68px] md:h-[68px]', delay: '1.2s' },
+  { content: '😴', label: 'sleeping', shape: 'hero-blob', bg: 'bg-[#2563EB]', rotate: '-rotate-6', position: 'right-[26%] top-0 md:right-[27%] md:top-[2%]', size: 'w-11 h-11 md:w-14 md:h-14', delay: '2.1s' },
+  { content: <BotAvatar />, label: 'robot avatar', shape: 'rounded-[38%]', bg: 'bg-[#A7F3D0]', rotate: 'rotate-6', position: 'right-[4%] top-[10%] md:right-[7%] md:top-[22%]', size: 'w-14 h-14 md:w-[72px] md:h-[72px]', delay: '0.6s' },
+  { content: '☕', label: 'coffee', shape: 'rounded-[60%_40%_30%_70%/60%_30%_70%_40%]', bg: 'bg-[#FF8B42]', rotate: 'rotate-12', position: 'left-[17%] top-[38%]', size: 'w-12 h-12', delay: '1.7s', hideOnMobile: true },
+  { content: '🎨', label: 'palette', shape: 'rounded-[50%_50%_50%_50%/60%_60%_40%_40%]', bg: 'bg-[#F472B6]', rotate: '-rotate-12', position: 'right-[19%] top-[54%]', size: 'w-14 h-14', delay: '2.6s', hideOnMobile: true },
+  { content: '📖', label: 'reading', shape: 'hero-blob', bg: 'bg-[#7DD3FC]', rotate: '-rotate-6', position: 'left-[6%] bottom-[10%] md:left-[4%] md:bottom-[22%]', size: 'w-14 h-14 md:w-[72px] md:h-[72px]', delay: '0.9s' },
+  { content: '🧵', label: 'sewing thread', shape: 'rounded-full', bg: 'bg-[#FACC15]', rotate: 'rotate-6', position: 'left-[25%] bottom-[3%]', size: 'w-11 h-11', delay: '2.4s', hideOnMobile: true },
+  { content: '🛼', label: 'roller skate', shape: 'rounded-[70%_16px_70%_16px]', bg: 'bg-[#312E81]', rotate: 'rotate-3', position: 'right-[10%] bottom-[4%] md:right-[4%] md:bottom-[8%]', size: 'w-12 h-12 md:w-16 md:h-16', delay: '1.4s' },
 ]
 
 
