@@ -2,10 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 import githublogo from '../images/icons/github (3).png'
 import Notebook from './ui/Notebook'
-import { Caveat } from 'next/font/google'
+import { caveat } from '@/fonts/caveat'
 
-// handwritten font for the notebook labels and page titles
-const hand = Caveat({ subsets: ['latin'], weight: ['600', '700'] })
 
 type ProjectItem = {
     title: string
@@ -133,7 +131,7 @@ export default function Project() {
         <div id='Projects' className='mx-auto max-w-7xl sm:px-14 px-5 pt-16 md:pt-20 pb-28 scroll-mt-24 overflow-x-clip relative'>
             <div className="font-extrabold  text-center w-[280px] sm:w-[340px] md:w-fit mx-auto relative flex flex-col md:flex-row items-center justify-center   text-2xl sm:text-3xl">
                 Here&apos;s some things I have built
-                <div className={`${hand.className} absolute right-1 top-13 sm:right-2 sm:top-15 md:-right-22 md:top-6 -rotate-12 w-32 bg-[#FF8B42] text-[#90440D] text-lg font-semibold text-center rounded-full px-4 py-0.5`}>
+                <div className={`${caveat.className} absolute right-1 top-13 sm:right-2 sm:top-15 md:-right-22 md:top-6 -rotate-12 w-32 bg-[#FF8B42] text-[#90440D] text-lg font-semibold text-center rounded-full px-4 py-0.5`}>
                     2023 - 2026
                 </div>
             </div>
@@ -150,7 +148,7 @@ export default function Project() {
                                 {project === featured && <FeaturedSticker />}
                                 <div className='mt-6'><CoverPhoto project={project} priority={i === 0} /></div>
                                 <div className='mt-auto rounded-md bg-[#fbf7ee] px-4 py-3 text-[#2a2a2a] shadow-[0_6px_14px_-6px_rgba(0,0,0,0.6)]'>
-                                    <h3 className={`${hand.className} text-3xl leading-none`}>{project.title}</h3>
+                                    <h3 className={`${caveat.className} font-semibold text-3xl leading-none`}>{project.title}</h3>
                                     <p className='mt-1 text-xs text-[#555]'>{project.tagline}</p>
                                 </div>
                                 <p className='mt-4 text-xs text-white/60'>
@@ -161,7 +159,7 @@ export default function Project() {
                         }
                         page={
                             <div className='flex h-full flex-col'>
-                                <h3 className={`${hand.className} text-4xl leading-none`}>{project.title}</h3>
+                                <h3 className={`${caveat.className} font-semibold text-4xl leading-none`}>{project.title}</h3>
                                 <p className='mt-4 text-sm leading-7'>{project.description}</p>
                                 {project.highlights && (
                                     <ul className='mt-3 space-y-1'>
@@ -179,7 +177,7 @@ export default function Project() {
                                         ))}
                                     </ul>
                                 )}
-                                <p className={`${hand.className} mt-5 mb-2 text-xl text-[#555]`}>Built with</p>
+                                <p className={`${caveat.className} font-semibold mt-5 mb-2 text-xl text-[#555]`}>Built with</p>
                                 <TechChips techStacks={project.techStacks} />
                                 <div className='mt-auto pt-7'><ProjectLinks project={project} /></div>
                             </div>

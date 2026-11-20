@@ -5,15 +5,12 @@ import yellowpushpin from '../images/icons/YellowPushPin.png'
 import orangepushpin from '../images/icons/OrangePuhPin.png'
 import pinkpushpin from '../images/icons/PinkPushPin.png'
 import pacmanpng from '../images/icons/Pacman.png'
-import { Caveat } from 'next/font/google'
+import { caveat } from '@/fonts/caveat'
 import ScrollReveal from './ui/ScrollReveal'
 
 
 
-const caveat = Caveat({
-    subsets: ['latin'],
-    weight: ['400', '700'],
-})
+
 
 
 

@@ -4,10 +4,8 @@ import githublogo from '../images/icons/github (3).png'
 import photo from '../images/zainab.jpg'
 import ScrollReveal from './ui/ScrollReveal'
 import Link from 'next/link'
-import { Caveat } from 'next/font/google'
+import { caveat } from '@/fonts/caveat'
 
-// same handwritten font as the notebook labels, at a soft weight for the headline
-const hand = Caveat({ subsets: ['latin'], weight: ['500'] })
 
 // Faint chalk scribbles scattered around the board, kept away from the photo and headline.
 const chalk = [
@@ -97,7 +95,7 @@ export default function HeroSection() {
           {chalk.map((note) => (
             <span
               key={note.text}
-              className={`${hand.className} absolute whitespace-nowrap text-white/[0.24] ${note.size} ${note.rotate} ${note.position} ${note.hideOnMobile ? 'hidden md:block' : ''}`}
+              className={`${caveat.className} absolute whitespace-nowrap text-white/[0.24] ${note.size} ${note.rotate} ${note.position} ${note.hideOnMobile ? 'hidden md:block' : ''}`}
             >
               {note.text}
             </span>
@@ -159,7 +157,7 @@ export default function HeroSection() {
         </div>
 
         <div className='flex flex-col items-center text-center text-white animate-fade-in-up font-sans mt-5 relative z-10'>
-          <h1 className={`${hand.className} font-medium leading-[1.1] text-3xl md:text-4xl lg:text-[42px]`}>
+          <h1 className={`${caveat.className} font-medium leading-[1.1] text-3xl md:text-4xl lg:text-[42px]`}>
             I build things for the web<br />
             and the wardrobe.
           </h1>
