@@ -49,25 +49,25 @@ export default function Aboutme() {
 
 
 
-                <div className='mx-auto max-w-6xl sm:px-14 px-5 pt-28 md:pt-40 '>
+                <div className='relative mx-auto max-w-7xl sm:px-14 px-5 pt-28 md:pt-36 pb-16'>
 
 
                     <div className="font-extrabold text-center w-[280px] sm:w-[320px] md:w-fit mx-auto relative flex flex-col md:flex-row items-center   text-black text-2xl md:text-3xl">
                         Everything you need to know
-                        <div className="absolute right-6 top-13 sm:right-14 sm:top-12 md:-right-22 md:top-5 -rotate-12 w-32 bg-[#42E3FF] text-[#226A82] text-base font-normal rounded-full px-5 py-1">
+                        <div className={`${caveat.className} absolute right-6 top-13 sm:right-14 sm:top-12 md:-right-22 md:top-5 -rotate-12 w-32 bg-[#42E3FF] text-[#226A82] text-xl font-bold text-center rounded-full px-5 py-0.5`}>
                             About me
                         </div>
                     </div>
 
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 gap-y-11 md:gap-y-10 lg:gap-y-12 mt-16">
+                    <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-11 md:gap-y-10 lg:gap-y-12 mt-16">
 
                         {/* Card 1 */}
-                        <div className="border border-[#ececec] shadow-[0_0_40px_rgb(242,242,242)]  rounded-xl px-4 py-3 flex flex-col">
+                        <div className="border border-[#ececec] shadow-[0_0_40px_rgb(242,242,242)] rounded-xl bg-white px-4 pt-2.5 pb-4 flex flex-col origin-top -rotate-2 transition-transform duration-500 hover:rotate-0">
                             <Image
                                 width={41}
                                 height={41}
-                                className="mx-auto    drop-shadow-[0_0_10px_rgba(251,146,60,0.8)]  my-2 md:my-4 z-10"
+                                className="mx-auto    drop-shadow-[0_0_10px_rgba(251,146,60,0.8)]  mt-0.5 mb-2.5 z-10"
                                 src={orangepushpin}
                                 alt="orange pushpin"
                             />
@@ -83,11 +83,11 @@ export default function Aboutme() {
                         </div>
 
                         {/* Card 2 */}
-                        <div className="border border-[#ececec] shadow-[0_0_40px_rgb(242,242,242)]  rounded-xl px-4 py-3 flex flex-col">
+                        <div className="border border-[#ececec] shadow-[0_0_40px_rgb(242,242,242)] rounded-xl bg-white px-4 pt-2.5 pb-4 flex flex-col origin-top rotate-2 transition-transform duration-500 hover:rotate-0">
                             <Image
                                 width={41}
                                 height={41}
-                                className="mx-auto drop-shadow-[0_0_10px_rgba(157,23,77,0.8)] my-2 md:my-4 z-10"
+                                className="mx-auto drop-shadow-[0_0_10px_rgba(157,23,77,0.8)] mt-0.5 mb-2.5 z-10"
                                 src={pinkpushpin}
                                 alt="pink pushpin"
                             />
@@ -104,19 +104,20 @@ export default function Aboutme() {
                             </div>
                         </div>
                        
+                        {/* pinned to the top of the second row, so it runs through the middle of the gap between rows */}
                         <Image
                             width={42}
                             height={42}
                             alt="pacman"
                             src={pacmanpng}
-                            className="hidden lg:block pacman absolute md:top-[60.3%] lg:top-[61.5%] -translate-x-1/4 -translate-y-1/2 z-10"
+                            className="hidden lg:block pacman absolute row-start-2 col-start-1 -top-6 -translate-x-1/4 -translate-y-1/2 z-10"
                         />
                         {/* Card 3 */}
-                        <div className="border border-[#ececec] shadow-[0_0_40px_rgb(242,242,242)]  rounded-xl px-4 py-3 flex flex-col">
+                        <div className="border border-[#ececec] shadow-[0_0_40px_rgb(242,242,242)] rounded-xl bg-white px-4 pt-2.5 pb-4 flex flex-col origin-top rotate-1 transition-transform duration-500 hover:rotate-0">
                             <Image
                                 width={41}
                                 height={41}
-                                className="mx-auto drop-shadow-[0_0_10px_rgba(254,240,138,0.8)] my-2 md:my-4 z-10"
+                                className="mx-auto drop-shadow-[0_0_10px_rgba(254,240,138,0.8)] mt-0.5 mb-2.5 z-10"
                                 src={yellowpushpin}
                                 alt="yellow pushpin"
                             />
@@ -132,11 +133,11 @@ export default function Aboutme() {
                         </div>
 
                         {/* Card 4 */}
-                        <div className="border border-[#ececec] shadow-[0_0_40px_rgb(242,242,242)] rounded-xl px-4 py-3 flex flex-col">
+                        <div className="border border-[#ececec] shadow-[0_0_40px_rgb(242,242,242)] rounded-xl bg-white px-4 pt-2.5 pb-4 flex flex-col origin-top -rotate-1 transition-transform duration-500 hover:rotate-0">
                             <Image
                                 width={40}
                                 height={40}
-                                className="mx-auto drop-shadow-[0_0_10px_rgba(147,197,253,0.8)] my-2 md:my-4 z-10"
+                                className="mx-auto drop-shadow-[0_0_10px_rgba(147,197,253,0.8)] mt-0.5 mb-2.5 z-10"
                                 src={bluepushpin}
                                 alt="blue pushpin"
                             />
@@ -162,28 +163,28 @@ export default function Aboutme() {
                                         <ScrollReveal animation='animate-fade-in' delay='400' >
                                             <div className='flex items-center justify-center h-11  w-auto gap-2  rounded-xl   sm:rounded-full bg-white'>
                                                 <Image alt='Next-icon' width={25} height={25} className='h-6 w-6 md:w-7 md:h-7' src='https://img.icons8.com/?size=100&id=MWiBjkuHeMVq&format=png&color=000000' />
-                                                <div className='sm:text-sm md:text-md text-[12px] tracking-wide'>Next js</div>
+                                                <div className='sm:text-sm md:text-md text-[12px] tracking-wide'>Next.js</div>
                                             </div>
                                         </ScrollReveal>
 
                                         <ScrollReveal animation='animate-fade-in' delay='500' >
                                             <div className='flex items-center justify-center h-11  w-auto gap-1  rounded-xl   sm:rounded-full bg-white'>
                                                 <Image alt='Mongo-icon' width={25} height={25} className='h-5 w-5 md:w-6 md:h-6' src='https://img.icons8.com/?size=100&id=B403GJErHZpx&format=png&color=000000' />
-                                                <div className='sm:text-sm md:text text-[12px] tracking-wide'>MongoDb</div>
+                                                <div className='sm:text-sm md:text text-[12px] tracking-wide'>MongoDB</div>
                                             </div>
                                         </ScrollReveal>
 
                                         <ScrollReveal animation='animate-fade-in' delay='700' >
                                             <div className='flex items-center justify-center h-11  w-auto gap-2  rounded-xl   sm:rounded-full bg-white'>
                                                 <Image alt='React-icon' width={25} height={25} className='h-5 w-5 md:w-6 md:h-6' src='https://img.icons8.com/?size=100&id=asWSSTBrDlTW&format=png&color=000000' />
-                                                <div className='sm:text-sm md:text-md text-[12px] tracking-wide'>React js</div>
+                                                <div className='sm:text-sm md:text-md text-[12px] tracking-wide'>React</div>
                                             </div>
                                         </ScrollReveal>
 
                                         <ScrollReveal animation='animate-fade-in' delay='900' >
                                             <div className='flex items-center justify-center h-11  w-auto gap-2  rounded-xl   sm:rounded-full bg-white '>
                                                 <Image alt='Node-icon' width={25} height={25} className='h-5 w-5 md:w-6 md:h-6' src='https://cdn-icons-png.flaticon.com/512/5968/5968322.png' />
-                                                <div className='sm:text-sm md:text-md text-[12px] tracking-wide'>Node js</div>
+                                                <div className='sm:text-sm md:text-md text-[12px] tracking-wide'>Node.js</div>
                                             </div>
                                         </ScrollReveal>
 
@@ -197,7 +198,7 @@ export default function Aboutme() {
                                         <ScrollReveal animation='animate-fade-in' delay='1000' >
                                             <div className='flex items-center justify-center h-11   w-auto gap-2 rounded-xl   sm:rounded-full bg-white '>
                                                 <Image alt='Typescript-icon' width={25} height={25} className='h-5 w-5 md:w-6 md:h-6' src='https://img.icons8.com/?size=100&id=wpZmKzk11AzJ&format=png&color=000000' />
-                                                <div className='sm:text-sm md:text-md text-[12px] tracking-wide'>Typescript</div>
+                                                <div className='sm:text-sm md:text-md text-[12px] tracking-wide'>TypeScript</div>
                                             </div>
                                         </ScrollReveal>
                                     </div>
