@@ -129,7 +129,7 @@ function FeaturedSticker() {
 export default function Project() {
     return (
         <div id='Projects' className='mx-auto max-w-7xl sm:px-14 px-5 pt-16 md:pt-20 pb-28 scroll-mt-24 overflow-x-clip relative'>
-            <div className="font-extrabold  text-center w-[280px] sm:w-[340px] md:w-fit mx-auto relative flex flex-col md:flex-row items-center justify-center   text-2xl sm:text-3xl">
+            <div className="font-semibold  text-center w-[280px] sm:w-[340px] md:w-fit mx-auto relative flex flex-col md:flex-row items-center justify-center   text-2xl sm:text-3xl">
                 Here&apos;s some things I have built
                 <div className={`${caveat.className} absolute right-1 top-13 sm:right-2 sm:top-15 md:-right-22 md:top-6 -rotate-12 w-32 bg-[#FF8B42] text-[#90440D] text-lg font-semibold text-center rounded-full px-4 py-0.5`}>
                     2023 - 2026
