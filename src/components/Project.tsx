@@ -15,7 +15,7 @@ type ProjectItem = {
     link?: string
     github: string
     highlights?: string[]
-    shortHighlights?: string[]
+    status?: string
     coverColor: string
 }
 
@@ -26,16 +26,11 @@ const featured: ProjectItem = {
     url: "byzayelle.com",
     image: "/projects/zayelle.jpg",
     description:
-        "Byzayelle is a full-stack fashion e-commerce platform with made-to-order custom pieces, multi-currency checkout in USD, GBP, CAD and NGN, and payments through both Stripe and Paystack.",
+        "Byzayelle is the full-stack e-commerce platform for my fashion brand, with made-to-order custom pieces and checkout in USD, GBP, CAD and NGN.",
     highlights: [
         "Per-device sessions with refresh-token rotation and stolen-token detection",
-        "Idempotent Stripe and Paystack webhooks with race-safe inventory updates",
-        "Country-based pricing and shipping, tiered rate limiting and custom-order booking",
-    ],
-    // shorter versions of the highlights for phones
-    shortHighlights: [
-        "Per-device sessions with stolen-token detection",
-        "Race-safe Stripe and Paystack payments",
+        "Idempotent Stripe and Paystack webhooks that can't oversell the last item",
+        "Fixed lost logins on iOS Safari by serving the API from the same domain",
     ],
     techStacks: ["Next.js", "TypeScript", "Tailwind", "Zustand", "Node.js", "Express", "Supabase", "PostgreSQL", "Stripe", "Paystack"],
     link: "https://byzayelle.com/",
@@ -46,11 +41,12 @@ const projects: ProjectItem[] = [
     {
         title: "Zayelle Photo Pipeline",
         coverColor: "#3f9b46",
-        tagline: "Serverless product-photo resizing on AWS",
+        tagline: "Product-photo resizing, moving to AWS Lambda",
+        status: "In progress",
         url: "zayelle-photo-pipeline",
         image: "/projects/photo-pipeline.jpg",
         description:
-            "Turns 3–10 MB product photos for the Zayelle store into two web-ready WebPs (1200px and 400px). One Sharp resize function runs three ways: on my laptop, from a Next.js upload UI, and in AWS Lambda whenever a photo lands in S3.",
+            "Turns 3–10 MB product photos for the Byzayelle store into two web-ready WebPs (1200px and 400px) with one Sharp resize function. It runs locally and from a Next.js upload UI; the AWS Lambda + S3 version is set up in a SAM template but not deployed yet.",
         techStacks: ["TypeScript", "Node.js", "Sharp", "Next.js", "AWS Lambda", "Amazon S3", "AWS SAM"],
         github: "https://github.com/zainab-kassim/zayelle-photo-pipeline",
     },
@@ -118,10 +114,10 @@ function ProjectLinks({ project }: { project: ProjectItem }) {
 // slight, alternating tilt so the notebooks look casually laid out
 const tilts = ['-rotate-2', 'rotate-1', 'rotate-2', '-rotate-1']
 
-function FeaturedSticker() {
+function Sticker({ children, className }: { children: React.ReactNode, className: string }) {
     return (
-        <span className='absolute top-5 right-12 rotate-6 rounded-full bg-[#FF8B42] text-[#4a1f04] px-3 py-1 text-xs font-semibold shadow-md'>
-            ★ Featured
+        <span className={`absolute top-5 right-12 rotate-6 rounded-full px-3 py-1 text-xs font-semibold shadow-md ${className}`}>
+            {children}
         </span>
     )
 }
@@ -145,7 +141,8 @@ export default function Project() {
                         coverColor={project.coverColor}
                         cover={
                             <div className='flex h-full flex-col'>
-                                {project === featured && <FeaturedSticker />}
+                                {project === featured && <Sticker className='bg-[#FF8B42] text-[#4a1f04]'>★ Featured</Sticker>}
+                                {project.status && <Sticker className='bg-[#FACC15] text-[#4a3a04]'>{project.status}</Sticker>}
                                 <div className='mt-6'><CoverPhoto project={project} priority={i === 0} /></div>
                                 <div className='mt-auto rounded-md bg-[#fbf7ee] px-4 py-3 text-[#2a2a2a] shadow-[0_6px_14px_-6px_rgba(0,0,0,0.6)]'>
                                     <h3 className={`${caveat.className} font-semibold text-3xl leading-none`}>{project.title}</h3>
@@ -160,17 +157,14 @@ export default function Project() {
                         page={
                             <div className='flex h-full flex-col'>
                                 <h3 className={`${caveat.className} font-semibold text-4xl leading-none`}>{project.title}</h3>
+                                {project.status && (
+                                    <span className='mt-3 self-start rounded-full bg-[#FACC15]/30 border border-[#c9a20a]/40 px-3 py-0.5 text-xs font-medium text-[#6b5306]'>{project.status}</span>
+                                )}
                                 <p className='mt-4 text-sm leading-7'>{project.description}</p>
                                 {project.highlights && (
                                     <ul className='mt-3 space-y-1'>
                                         {project.highlights.map((point) => (
-                                            <li key={point} className={`${project.shortHighlights ? 'hidden md:flex' : 'flex'} gap-2.5 text-sm leading-7`}>
-                                                <span className='text-[#FF8B42]' aria-hidden='true'>✓</span>
-                                                {point}
-                                            </li>
-                                        ))}
-                                        {project.shortHighlights?.map((point) => (
-                                            <li key={point} className='flex md:hidden gap-2.5 text-sm leading-7'>
+                                            <li key={point} className='flex gap-2.5 text-sm leading-7'>
                                                 <span className='text-[#FF8B42]' aria-hidden='true'>✓</span>
                                                 {point}
                                             </li>
