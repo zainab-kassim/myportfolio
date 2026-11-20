@@ -1,25 +1,43 @@
 import React from 'react'
+import Image from 'next/image'
 
-
+const links = [
+  { label: 'Instagram', href: 'https://www.instagram.com/zainab_temi_/', icon: 'https://img.icons8.com/?size=100&id=32320&format=png&color=000000' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/zainab-kassim/', icon: 'https://img.icons8.com/?size=100&id=2EqeH19eMd3a&format=png&color=000000' },
+  { label: 'GitHub', href: 'https://github.com/zainab-kassim', icon: 'https://img.icons8.com/?size=100&id=fmFqQmR0UdsR&format=png&color=000000' },
+  { label: 'Email', href: 'https://mail.google.com/mail/?view=cm&fs=1&to=kassimzainab11@gmail.com', icon: 'https://img.icons8.com/?size=100&id=Y2GfpkgYNp42&format=png&color=000000' },
+]
 
 export default function Footer() {
   return (
-    <div className='max-w-6xl border-t-[0.5px] bottom-0 mx-auto mt-24 pb-12 sm:px-14 px-5'>
-      <div className=' flex flex-row items-center text-black justify-between border-t-[0.5px] py-8 border-[#989898]'>
-        <div className=' flex flex-row items-center font-bold text-[10px] sm:text-lg md:text-xl'>
-          Let&apos;s Get In Touch
-          <span className="relative ml-2 sm:ml-3 flex size-2 sm:size-3">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-            <span className="relative inline-flex size-2 sm:size-3 rounded-full bg-green-500"></span>
+    <footer className='max-w-7xl mx-auto mt-8 sm:px-14 px-5'>
+      {/* one row at every size: icon buttons on phones, labelled pills from tablet up */}
+      <div className='flex items-center justify-between gap-4 border-t border-black/10 py-8 sm:py-10 text-black'>
+        <div className='flex items-center gap-2.5 text-base sm:text-xl font-bold whitespace-nowrap'>
+          Let&apos;s get in touch
+          <span className='relative flex size-2.5'>
+            <span className='absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75' />
+            <span className='relative inline-flex size-2.5 rounded-full bg-green-500' />
           </span>
         </div>
-        <div className='flex flex-row flex-wrap gap-1 sm:gap-2 text-[10px] sm:text-sm  items-center'>
-          <a href="https://www.instagram.com/zainab_temi_/" target='_blank' className='cursor-pointer hover:text-gray-800 hover:underline '><h2>Instagram .</h2></a>
-          <a href="https://www.linkedin.com/in/zainab-kassim/"  target='_blank' className='cursor-pointer hover:text-gray-800 hover:underline '><h2>LinkedIn .</h2></a>
-          <a href="https://github.com/zainab-kassim"  target='_blank' className='cursor-pointer hover:text-gray-800 hover:underline '><h2>Github .</h2></a>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kassimzainab11@gmail.com"  target='_blank' className='cursor-pointer hover:text-gray-800 hover:underline '><h2>Gmail</h2></a>
-        </div>
+        <ul className='flex items-center gap-1.5 sm:gap-2'>
+          {links.map((link) => (
+            <li key={link.label}>
+              <a
+                href={link.href}
+                target='_blank'
+                rel='noopener noreferrer'
+                aria-label={link.label}
+                title={link.label}
+                className='group inline-flex items-center justify-center gap-1 rounded-full border border-black/10 w-9 h-9 sm:w-auto sm:h-auto sm:px-4 sm:py-2 text-sm transition-colors duration-300 hover:bg-black hover:text-white'
+              >
+                <Image src={link.icon} alt='' width={20} height={20} className='w-4 h-4 sm:hidden group-hover:invert' />
+                <span className='hidden sm:inline'>{link.label} <span aria-hidden='true'>↗</span></span>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
-    </div>
+    </footer>
   )
 }
