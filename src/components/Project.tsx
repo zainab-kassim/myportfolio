@@ -1,57 +1,190 @@
 import React from 'react'
 import Image from 'next/image'
+import githublogo from '../images/icons/github (3).png'
+import Notebook from './ui/Notebook'
+import { Caveat } from 'next/font/google'
 
+// handwritten font for the notebook labels and page titles
+const hand = Caveat({ subsets: ['latin'], weight: ['600', '700'] })
 
+type ProjectItem = {
+    title: string
+    tagline: string
+    url: string
+    image: string
+    description: string
+    techStacks: string[]
+    link?: string
+    github: string
+    highlights?: string[]
+    shortHighlights?: string[]
+    coverColor: string
+}
 
+const featured: ProjectItem = {
+    title: "Byzayelle",
+    coverColor: "#1c1c1e",
+    tagline: "Fashion e-commerce with made-to-order pieces",
+    url: "byzayelle.com",
+    image: "/projects/zayelle.jpg",
+    description:
+        "Byzayelle is a full-stack fashion e-commerce platform with made-to-order custom pieces, multi-currency checkout in USD, GBP, CAD and NGN, and payments through both Stripe and Paystack.",
+    highlights: [
+        "Per-device sessions with refresh-token rotation and stolen-token detection",
+        "Idempotent Stripe and Paystack webhooks with race-safe inventory updates",
+        "Country-based pricing and shipping, tiered rate limiting and custom-order booking",
+    ],
+    // shorter versions of the highlights for phones
+    shortHighlights: [
+        "Per-device sessions with stolen-token detection",
+        "Race-safe Stripe and Paystack payments",
+    ],
+    techStacks: ["Next.js", "TypeScript", "Tailwind", "Zustand", "Node.js", "Express", "Supabase", "PostgreSQL", "Stripe", "Paystack"],
+    link: "https://byzayelle.com/",
+    github: "https://github.com/zainab-kassim/zayelle-frontend",
+}
+
+const projects: ProjectItem[] = [
+    {
+        title: "Zayelle Photo Pipeline",
+        coverColor: "#3f9b46",
+        tagline: "Serverless product-photo resizing on AWS",
+        url: "zayelle-photo-pipeline",
+        image: "/projects/photo-pipeline.jpg",
+        description:
+            "Turns 3–10 MB product photos for the Zayelle store into two web-ready WebPs (1200px and 400px). One Sharp resize function runs three ways: on my laptop, from a Next.js upload UI, and in AWS Lambda whenever a photo lands in S3.",
+        techStacks: ["TypeScript", "Node.js", "Sharp", "Next.js", "AWS Lambda", "Amazon S3", "AWS SAM"],
+        github: "https://github.com/zainab-kassim/zayelle-photo-pipeline",
+    },
+    {
+        title: "Celestique",
+        coverColor: "#b4553f",
+        tagline: "Modern e-commerce storefront",
+        url: "celestique.vercel.app",
+        image: "/projects/celestique.jpg",
+        description:
+            "Celestique is an e-commerce platform built to provide a seamless online shopping experience. It features a modern, responsive, and user-friendly interface that allows customers to easily browse products, manage their carts, and complete secure checkouts.",
+        techStacks: ["React", "Next.js", "Tailwind", "MongoDB", "Postman", "TypeScript", "Express"],
+        link: "https://celestique.vercel.app/",
+        github: "https://github.com/somkenemuscle/Celestique",
+    },
+    {
+        title: "Appvarsity",
+        coverColor: "#4f46c8",
+        tagline: "Learning hub for Aptech students",
+        url: "appvarsity.vercel.app",
+        image: "/projects/appvarsity.jpg",
+        description:
+            "Appvarsity is a learning platform designed to support Aptech students in their academic journey. It provides access to study materials, exam preparation resources, and essential information about Aptech courses.",
+        techStacks: ["React", "Next.js", "Tailwind", "MongoDB", "Postman", "TypeScript", "Express"],
+        link: "https://appvarsity.vercel.app/",
+        github: "https://github.com/somkenemuscle/AppVarsity",
+    },
+]
+
+// Screenshot taped onto the notebook cover like a photo.
+function CoverPhoto({ project, priority = false }: { project: ProjectItem, priority?: boolean }) {
+    return (
+        <div className='relative -rotate-2 bg-white p-2 pb-3 shadow-[0_10px_20px_-8px_rgba(0,0,0,0.6)]'>
+            <span className='absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 rotate-3 bg-[#fdf3c4]/80 shadow-sm' aria-hidden='true' />
+            <Image src={project.image} alt={`${project.title} preview`} width={1200} height={750} priority={priority} className='w-full h-auto' />
+        </div>
+    )
+}
+
+function TechChips({ techStacks }: { techStacks: string[] }) {
+    return (
+        <ul className='flex flex-wrap gap-2'>
+            {techStacks.map((tech) => (
+                <li key={tech} className='rounded-full border border-[#2a2a2a]/25 bg-white/60 px-3 py-1 text-xs text-[#2a2a2a]'>{tech}</li>
+            ))}
+        </ul>
+    )
+}
+
+function ProjectLinks({ project }: { project: ProjectItem }) {
+    return (
+        <div className='flex items-center gap-3'>
+            {project.link && (
+                <a href={project.link} target='_blank' rel='noopener noreferrer' className='inline-flex items-center gap-1 rounded-full bg-[#1c1c1e] hover:bg-[#333] px-5 py-2.5 text-sm font-medium text-white transition-colors duration-300'>
+                    Visit site <span aria-hidden='true'>↗</span>
+                </a>
+            )}
+            <a href={project.github} target='_blank' rel='noopener noreferrer' aria-label={`${project.title} on GitHub`} title='View code on GitHub' className='flex items-center justify-center w-10 h-10 rounded-full bg-[#1c1c1e] hover:bg-[#333] transition-colors duration-300'>
+                <Image height={40} width={40} className='w-5 h-5' alt='' src={githublogo} />
+            </a>
+        </div>
+    )
+}
+
+// slight, alternating tilt so the notebooks look casually laid out
+const tilts = ['-rotate-2', 'rotate-1', 'rotate-2', '-rotate-1']
+
+function FeaturedSticker() {
+    return (
+        <span className='absolute top-5 right-12 rotate-6 rounded-full bg-[#FF8B42] text-[#4a1f04] px-3 py-1 text-xs font-semibold shadow-md'>
+            ★ Featured
+        </span>
+    )
+}
 
 export default function Project() {
-    const projects = [
-        {
-            title: "Celestique",
-            description:
-                "Celstique is an e-commerce platform built to provide a seamless online shopping experience. It features a modern, responsive, and user-friendly interface that allows customers to easily browse products, manage their carts, and complete secure checkouts.",
-            techStacks: ["React", "Next.js", "Tailwind", "Mongo Db", "Postman", "Typescript", "Express"],
-            link: "https://celestique.vercel.app/",
-            github:"https://github.com/somkenemuscle/Celestique"
-        },
-        {
-            title: "Appvarsity",
-            description:
-                "Appvarsity is a learning platform designed to support Aptech students in their academic journey. It provides access to study materials, exam preparation resources, and essential information about Aptech courses.",
-            techStacks: ["React", "Next.js", "Tailwind", "Mongo Db", "Postman", "Typescript", "Express"],
-            link: "https://appvarsity.vercel.app/",
-            github:"https://github.com/somkenemuscle/AppVarsity"
-        },
-    ]
     return (
-        <div id='Projects' className='mx-auto max-w-6xl sm:px-14 px-5 pt-20 pb-24 scroll-mt-24'>
+        <div id='Projects' className='mx-auto max-w-7xl sm:px-14 px-5 pt-16 md:pt-20 pb-28 scroll-mt-24 overflow-x-clip relative'>
             <div className="font-extrabold  text-center w-[280px] sm:w-[340px] md:w-fit mx-auto relative flex flex-col md:flex-row items-center justify-center   text-2xl sm:text-3xl">
                 Here&apos;s some things I have built
-                <div className="absolute right-1 top-13 sm:right-2 sm:top-15 md:-right-22 md:top-6 -rotate-12 w-32 bg-[#FF8B42] text-[#90440D] text-sm font-normal rounded-full px-4 py-1.5">
-                    2023 - 2025
+                <div className={`${hand.className} absolute right-1 top-13 sm:right-2 sm:top-15 md:-right-22 md:top-6 -rotate-12 w-32 bg-[#FF8B42] text-[#90440D] text-lg font-semibold text-center rounded-full px-4 py-0.5`}>
+                    2023 - 2026
                 </div>
             </div>
 
-            <div className='grid md:grid-cols-2 grid-cols-1 gap-8 items-stretch mt-24'>
-                {projects.map((project, index) => (
-                    <div key={index} className='bg-[#151515] border-[0.5px] md:px-8 px-6 pt-4 pb-8 rounded-lg border-[#313030]'>
-                        <div className='flex flex-row  items-center justify-between'>
-                            <div className='text-2xl'>{project.title}</div>
-                            <a href={project.github}><Image height={70} width={70} className=' w-10 h-10' alt='githublogo' src='https://img.icons8.com/?size=100&id=fmFqQmR0UdsR&format=png&color=480891' /></a>
-                        </div>
-                        <hr className='mb-5 mt-2' />
-                        <div className='text-[#ACA6A6] text-sm'>
-                            {project.description}
-                        </div>
-                        <div className='flex flex-row flex-wrap gap-2 text-sm mt-4 mb-8 items-center'>
-                            {project.techStacks.map((techStack, i) => (
-                                <h2 key={i}>{techStack}.</h2>
-                            ))}
-
-                        </div>
-
-                        <a href={project.link} className='text-[#ACA6A6] hover:underline hover:text-neutral-500 text-md mb-14'>View Project{' '}🚀</a>
-                    </div>
+            {/* 2 x 2 grid of notebooks: hover (or tap) one to open it */}
+            <div className='relative grid grid-cols-1 md:grid-cols-2 gap-x-14 gap-y-14 md:gap-y-16 items-stretch mt-16 md:mt-20'>
+                {[featured, ...projects].map((project, i) => (
+                    <Notebook
+                        key={project.title}
+                        className={`min-h-[440px] md:min-h-[560px] ${tilts[i % tilts.length]} transition-transform duration-500 hover:rotate-0`}
+                        coverColor={project.coverColor}
+                        cover={
+                            <div className='flex h-full flex-col'>
+                                {project === featured && <FeaturedSticker />}
+                                <div className='mt-6'><CoverPhoto project={project} priority={i === 0} /></div>
+                                <div className='mt-auto rounded-md bg-[#fbf7ee] px-4 py-3 text-[#2a2a2a] shadow-[0_6px_14px_-6px_rgba(0,0,0,0.6)]'>
+                                    <h3 className={`${hand.className} text-3xl leading-none`}>{project.title}</h3>
+                                    <p className='mt-1 text-xs text-[#555]'>{project.tagline}</p>
+                                </div>
+                                <p className='mt-4 text-xs text-white/60'>
+                                    <span className='[@media(hover:none)]:hidden'>Hover to open ↗</span>
+                                    <span className='hidden [@media(hover:none)]:inline'>Tap to open ↗</span>
+                                </p>
+                            </div>
+                        }
+                        page={
+                            <div className='flex h-full flex-col'>
+                                <h3 className={`${hand.className} text-4xl leading-none`}>{project.title}</h3>
+                                <p className='mt-4 text-sm leading-7'>{project.description}</p>
+                                {project.highlights && (
+                                    <ul className='mt-3 space-y-1'>
+                                        {project.highlights.map((point) => (
+                                            <li key={point} className={`${project.shortHighlights ? 'hidden md:flex' : 'flex'} gap-2.5 text-sm leading-7`}>
+                                                <span className='text-[#FF8B42]' aria-hidden='true'>✓</span>
+                                                {point}
+                                            </li>
+                                        ))}
+                                        {project.shortHighlights?.map((point) => (
+                                            <li key={point} className='flex md:hidden gap-2.5 text-sm leading-7'>
+                                                <span className='text-[#FF8B42]' aria-hidden='true'>✓</span>
+                                                {point}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                                <p className={`${hand.className} mt-5 mb-2 text-xl text-[#555]`}>Built with</p>
+                                <TechChips techStacks={project.techStacks} />
+                                <div className='mt-auto pt-7'><ProjectLinks project={project} /></div>
+                            </div>
+                        }
+                    />
                 ))}
             </div>
         </div>
