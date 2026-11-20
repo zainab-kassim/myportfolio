@@ -180,6 +180,8 @@ export default function Project() {
                                 <p className={`${caveat.className} font-semibold mt-5 mb-2 text-xl text-[#555]`}>Built with</p>
                                 <TechChips techStacks={project.techStacks} />
                                 <div className='mt-auto pt-7'><ProjectLinks project={project} /></div>
+                                {/* phones only: notebooks open by themselves there, so explain how to see the cover */}
+                                <p className='hidden [@media(hover:none)]:block mt-4 text-xs text-[#888]'>↺ Tap the page to close it and see the cover</p>
                             </div>
                         }
                     />
