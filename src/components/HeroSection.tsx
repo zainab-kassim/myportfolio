@@ -4,34 +4,66 @@ import githublogo from '../images/icons/github (3).png'
 import photo from '../images/zainab.jpg'
 import ScrollReveal from './ui/ScrollReveal'
 import Link from 'next/link'
-import { BotAvatar } from './ui/Avatars'
+import { Caveat } from 'next/font/google'
 
-type Tile = {
-  content: React.ReactNode
-  label: string
-  bg: string
-  rotate: string
-  position: string
-  size: string
-  shape: string
-  delay: string
-  hideOnMobile?: boolean
-}
+// same handwritten font as the notebook labels, at a soft weight for the headline
+const hand = Caveat({ subsets: ['latin'], weight: ['500'] })
 
-// Tiles floating around the headline. `position` is relative to the hero
-// container, `shape` mixes circles and blobs to echo the photo, and `delay`
-// staggers the bobbing so the tiles don't move in sync.
-const tiles: Tile[] = [
-  { content: '🐈', label: 'cat', shape: 'rounded-full', bg: 'bg-[#7C5CFF]', rotate: '-rotate-8', position: 'left-[4%] top-[6%] md:left-[7%] md:top-[10%]', size: 'w-14 h-14 md:w-[68px] md:h-[68px]', delay: '1.2s' },
-  { content: '😴', label: 'sleeping', shape: 'hero-blob', bg: 'bg-[#2563EB]', rotate: '-rotate-6', position: 'right-[26%] top-0 md:right-[27%] md:top-[2%]', size: 'w-11 h-11 md:w-14 md:h-14', delay: '2.1s' },
-  { content: <BotAvatar />, label: 'robot avatar', shape: 'rounded-[38%]', bg: 'bg-[#A7F3D0]', rotate: 'rotate-6', position: 'right-[4%] top-[10%] md:right-[7%] md:top-[22%]', size: 'w-14 h-14 md:w-[72px] md:h-[72px]', delay: '0.6s' },
-  { content: '☕', label: 'coffee', shape: 'rounded-[60%_40%_30%_70%/60%_30%_70%_40%]', bg: 'bg-[#FF8B42]', rotate: 'rotate-12', position: 'left-[17%] top-[38%]', size: 'w-12 h-12', delay: '1.7s', hideOnMobile: true },
-  { content: '🎨', label: 'palette', shape: 'rounded-[50%_50%_50%_50%/60%_60%_40%_40%]', bg: 'bg-[#F472B6]', rotate: '-rotate-12', position: 'right-[19%] top-[54%]', size: 'w-14 h-14', delay: '2.6s', hideOnMobile: true },
-  { content: '📖', label: 'reading', shape: 'hero-blob', bg: 'bg-[#7DD3FC]', rotate: '-rotate-6', position: 'left-[6%] bottom-[10%] md:left-[4%] md:bottom-[22%]', size: 'w-14 h-14 md:w-[72px] md:h-[72px]', delay: '0.9s' },
-  { content: '🧵', label: 'sewing thread', shape: 'rounded-full', bg: 'bg-[#FACC15]', rotate: 'rotate-6', position: 'left-[25%] bottom-[3%]', size: 'w-11 h-11', delay: '2.4s', hideOnMobile: true },
-  { content: '🛼', label: 'roller skate', shape: 'rounded-[70%_16px_70%_16px]', bg: 'bg-[#312E81]', rotate: 'rotate-3', position: 'right-[10%] bottom-[4%] md:right-[4%] md:bottom-[8%]', size: 'w-12 h-12 md:w-16 md:h-16', delay: '1.4s' },
+// Faint chalk scribbles scattered around the board, kept away from the photo and headline.
+const chalk = [
+  { text: 'E = mc²', position: 'left-[6%] top-[14%]', rotate: '-rotate-6', size: 'text-2xl' },
+  { text: 'a² + b² = c²', position: 'left-[18%] top-[26%]', rotate: 'rotate-3', size: 'text-xl', hideOnMobile: true },
+  { text: '∫ eˣ dx = eˣ + C', position: 'left-[4%] top-[44%]', rotate: 'rotate-2', size: 'text-xl', hideOnMobile: true },
+  { text: 'O(n log n)', position: 'left-[20%] top-[58%]', rotate: '-rotate-3', size: 'text-2xl', hideOnMobile: true },
+  { text: 'f(x) = x² + 2x + 1', position: 'left-[7%] top-[74%]', rotate: '-rotate-2', size: 'text-xl', hideOnMobile: true },
+  { text: 'π ≈ 3.14159', position: 'left-[28%] top-[86%]', rotate: 'rotate-6', size: 'text-lg', hideOnMobile: true },
+  { text: '</>', position: 'left-[33%] top-[11%]', rotate: 'rotate-12', size: 'text-3xl', hideOnMobile: true },
+  { text: 'Σ 1/n²', position: 'right-[30%] top-[9%]', rotate: '-rotate-6', size: 'text-2xl', hideOnMobile: true },
+  { text: 'λx. x + 1', position: 'right-[6%] top-[13%]', rotate: 'rotate-3', size: 'text-xl' },
+  { text: 'y = mx + b', position: 'right-[18%] top-[30%]', rotate: '-rotate-3', size: 'text-2xl', hideOnMobile: true },
+  { text: 'if (sleep < 8) coffee++', position: 'right-[3%] top-[45%]', rotate: 'rotate-2', size: 'text-lg', hideOnMobile: true },
+  { text: '√2 ≈ 1.414', position: 'right-[22%] top-[60%]', rotate: 'rotate-6', size: 'text-xl' },
+  { text: 'n! = n·(n−1)!', position: 'right-[5%] top-[76%]', rotate: '-rotate-6', size: 'text-xl', hideOnMobile: true },
+  { text: 'Δx → 0', position: 'right-[30%] top-[88%]', rotate: '-rotate-2', size: 'text-lg', hideOnMobile: true },
+  { text: '{ }', position: 'left-[46%] top-[94%]', rotate: 'rotate-12', size: 'text-2xl', hideOnMobile: true },
 ]
 
+// Chalk doodles drawn on the board: a graph, a triangle, a circle, arrows and stars.
+const doodles = [
+  {
+    position: 'left-[3%] top-[56%]', size: 'w-36 h-28', rotate: '-rotate-3', viewBox: '0 0 140 110',
+    content: <><path d='M12 98 V10 M12 98 H132 M8 16 L12 8 L16 16 M126 94 L134 98 L126 102' /><path d='M14 80 C 34 20, 50 20, 66 56 S 100 96, 128 26' /></>,
+  },
+  {
+    position: 'right-[4%] top-[24%]', size: 'w-28 h-24', rotate: 'rotate-6', viewBox: '0 0 120 100',
+    content: <><path d='M14 88 L106 88 L14 14 Z' /><path d='M14 74 H28 V88' /><path d='M84 88 A 22 22 0 0 0 88 74' /><path d='M60 46 l 6 -4' /></>,
+    hideOnMobile: true,
+  },
+  {
+    position: 'left-[30%] top-[38%]', size: 'w-20 h-20', rotate: 'rotate-0', viewBox: '0 0 100 100',
+    content: <><path d='M50 8 C 76 6, 94 26, 92 52 C 90 78, 70 94, 46 92 C 22 90, 6 70, 8 46 C 10 24, 28 10, 52 10' /><path d='M50 50 L 88 44' /><circle cx='50' cy='50' r='2' /></>,
+    hideOnMobile: true,
+  },
+  {
+    position: 'right-[30%] top-[46%]', size: 'w-24 h-12', rotate: '-rotate-6', viewBox: '0 0 120 60',
+    content: <path d='M6 40 C 30 10, 70 10, 104 30 M92 18 L106 31 L88 38' />,
+    hideOnMobile: true,
+  },
+  {
+    position: 'left-[40%] top-[6%]', size: 'w-10 h-10', rotate: 'rotate-12', viewBox: '0 0 50 50',
+    content: <path d='M25 4 L30 19 L46 19 L33 29 L38 45 L25 35 L12 45 L17 29 L4 19 L20 19 Z' />,
+    hideOnMobile: true,
+  },
+  {
+    position: 'right-[12%] top-[88%]', size: 'w-8 h-8', rotate: '-rotate-12', viewBox: '0 0 50 50',
+    content: <path d='M25 4 L30 19 L46 19 L33 29 L38 45 L25 35 L12 45 L17 29 L4 19 L20 19 Z' />,
+  },
+  {
+    position: 'left-[12%] top-[90%]', size: 'w-32 h-6', rotate: 'rotate-2', viewBox: '0 0 160 20',
+    content: <path d='M4 12 C 20 4, 30 18, 46 10 S 74 4, 90 12 S 120 18, 156 8' />,
+    hideOnMobile: true,
+  },
+]
 
 const navLinks = [
   { label: 'Projects', href: '#Projects', dot: 'bg-[#7C5CFF]' },
@@ -49,12 +81,45 @@ const socials = [
 export default function HeroSection() {
   return (
     <>
-      {/* background: dotted grid plus soft white glows, clipped so it can't cause sideways scroll */}
-      <div className='absolute inset-x-0 top-0 h-[1000px] overflow-hidden pointer-events-none' aria-hidden='true'>
-        <div className='hero-pattern absolute inset-0' />
-        <div className='absolute top-40 left-1/2 -translate-x-[110%] w-80 h-80 rounded-full bg-white/[0.07] blur-3xl' />
-        <div className='absolute top-72 left-1/2 translate-x-[10%] w-80 h-80 rounded-full bg-white/[0.05] blur-3xl' />
+      {/* background: a chalkboard with faint chalk equations, clipped so it can't cause sideways scroll */}
+      <div className='chalkboard absolute inset-x-0 top-0 h-[1000px] overflow-hidden pointer-events-none select-none' aria-hidden='true'>
+        {/* eraser swipes: wide, soft strokes where the board was wiped */}
+        <svg className='absolute inset-0 w-full h-full' viewBox='0 0 1000 1000' preserveAspectRatio='none'>
+          <g fill='none' stroke='rgba(255,255,255,0.035)' strokeWidth='60' strokeLinecap='round' style={{ filter: 'blur(14px)' }}>
+            <path d='M60 210 C 220 160, 330 250, 470 190' />
+            <path d='M560 700 C 700 640, 820 740, 960 680' />
+            <path d='M120 860 C 260 820, 380 900, 520 850' />
+          </g>
+        </svg>
+
+        {/* chalk layer: everything inside is roughened by the #chalk filter so it looks scribbled */}
+        <div className='absolute inset-0' style={{ filter: 'url(#chalk)' }}>
+          {chalk.map((note) => (
+            <span
+              key={note.text}
+              className={`${hand.className} absolute whitespace-nowrap text-white/[0.24] ${note.size} ${note.rotate} ${note.position} ${note.hideOnMobile ? 'hidden md:block' : ''}`}
+            >
+              {note.text}
+            </span>
+          ))}
+          {doodles.map((doodle) => (
+            <svg key={doodle.position} viewBox={doodle.viewBox} className={`absolute ${doodle.position} ${doodle.size} ${doodle.rotate} ${doodle.hideOnMobile ? 'hidden md:block' : ''}`} fill='none' stroke='rgba(255,255,255,0.22)' strokeWidth='2.5' strokeLinecap='round' strokeLinejoin='round'>
+              {doodle.content}
+            </svg>
+          ))}
+        </div>
       </div>
+
+      {/* chalk texture: wobbles the edges and breaks the strokes up with dusty gaps */}
+      <svg width='0' height='0' className='absolute' aria-hidden='true'>
+        <filter id='chalk' x='-10%' y='-10%' width='120%' height='120%'>
+          <feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' seed='3' result='wobble' />
+          <feDisplacementMap in='SourceGraphic' in2='wobble' scale='3' xChannelSelector='R' yChannelSelector='G' result='rough' />
+          <feTurbulence type='fractalNoise' baseFrequency='1.4' numOctaves='1' seed='8' result='grain' />
+          <feColorMatrix in='grain' type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -2.6 0 0 0 1.9' result='dust' />
+          <feComposite in='rough' in2='dust' operator='in' />
+        </filter>
+      </svg>
 
       <div className='sm:px-14 px-5 sticky top-6 z-20'>
         <nav className='flex mx-auto max-w-md sm:max-w-3xl justify-between items-center pl-4 pr-2 sm:pl-5 py-2 bg-[#141414]/70 border border-white/10 shadow-xl/30 backdrop-blur-2xl rounded-full'>
@@ -84,23 +149,7 @@ export default function HeroSection() {
       </div>
 
 
-      <div className='relative flex flex-col sm:px-14 px-5 justify-center items-center mx-auto max-w-5xl mt-20 sm:mt-24 pt-24 pb-20 md:pt-28 md:pb-20'>
-        {tiles.map((tile) => (
-          <div
-            key={tile.label}
-            className={`hero-float absolute ${tile.position} ${tile.hideOnMobile ? 'hidden md:block' : ''}`}
-            style={{ animationDelay: tile.delay }}
-          >
-            <div
-              role='img'
-              aria-label={tile.label}
-              className={`${tile.size} ${tile.bg} ${tile.rotate} ${tile.shape} flex items-center justify-center overflow-hidden soft-lift text-2xl md:text-3xl select-none transition-transform duration-300 hover:rotate-0 hover:scale-110`}
-            >
-              {tile.content}
-            </div>
-          </div>
-        ))}
-
+      <div className='relative flex flex-col sm:px-14 px-5 justify-center items-center mx-auto max-w-7xl mt-20 sm:mt-24 pt-24 pb-16 md:pt-28 md:pb-16'>
         <div className='relative animate-fade-in-up'>
           <div className='hero-blob w-28 h-28 md:w-36 md:h-36 overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.5)]'>
             <Image src={photo} alt='Zainab Kassim' quality={90} priority className='hero-blob w-full h-full object-cover object-[50%_30%]' />
@@ -109,25 +158,22 @@ export default function HeroSection() {
           <span className='absolute bottom-3 right-3 w-4 h-4 rounded-full bg-[#34D399] border-2 border-[#1a1a1a]' />
         </div>
 
-        <div className='flex flex-col items-center text-center text-white animate-fade-in-up font-sans mt-7 relative z-10'>
-          <h1 className='font-extrabold tracking-tight leading-[1.1] text-2xl md:text-[28px] lg:text-[32px]'>
-            Zainab is a<br />
-            <span className='relative inline-block'>
-              Software Developer
-              {/* hand-drawn squiggle under the role */}
-              <svg viewBox='0 0 300 12' preserveAspectRatio='none' className='absolute left-0 -bottom-2 w-full h-2.5' aria-hidden='true'>
-                <path d='M3 8 Q 20 2 37 7 T 75 7 T 112 7 T 150 7 T 187 7 T 225 7 T 262 7 T 297 6' fill='none' stroke='#FF8B42' strokeWidth='4' strokeLinecap='round' />
-              </svg>
-            </span>
+        <div className='flex flex-col items-center text-center text-white animate-fade-in-up font-sans mt-5 relative z-10'>
+          <h1 className={`${hand.className} font-medium leading-[1.1] text-3xl md:text-4xl lg:text-[42px]`}>
+            I build things for the web<br />
+            and the wardrobe.
           </h1>
-          <p className='mt-6 md:mt-9 inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-1.5 text-sm text-white/80'>
+          <p className='mt-2 text-sm md:text-base text-white/70'>
+            Full-stack developer <span className='text-white/30' aria-hidden='true'>·</span> founder of Byzayelle
+          </p>
+          <p className='mt-5 inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-1.5 text-sm text-white/80'>
             <span aria-hidden='true'>📍</span>
-            Based in Ottawa, <span className='-ml-1'><span className='text-red-500'>Ca</span>na<span className='text-red-500'>da</span></span>
+            Based in Ottawa, Canada
           </p>
         </div>
 
         <ScrollReveal animation='animate-expand-horizontally'>
-          <div className='flex justify-center mt-7 gap-3 relative mb-4'>
+          <div className='flex justify-center mt-5 gap-3 relative mb-4'>
             {socials.map((social) => (
               <a key={social.label} href={social.href} target='_blank' rel='noopener noreferrer' aria-label={social.label} title={social.label}>
                 <span className={`${social.bg} ${social.rotate} flex items-center justify-center w-12 h-12 rounded-xl border border-white/10 shadow-[0_8px_18px_-6px_rgba(0,0,0,0.6)] transition-transform duration-300 hover:rotate-0 hover:-translate-y-1.5 hover:scale-110`}>
