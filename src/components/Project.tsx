@@ -28,9 +28,9 @@ const featured: ProjectItem = {
     description:
         "Byzayelle is the full-stack e-commerce platform for my fashion brand, with made-to-order custom pieces and checkout in USD, GBP, CAD and NGN.",
     highlights: [
-        "Per-device sessions with refresh-token rotation and stolen-token detection",
-        "Idempotent Stripe and Paystack webhooks that can't oversell the last item",
-        "Fixed lost logins on iOS Safari by serving the API from the same domain",
+        "Rotating refresh tokens per device",
+        "Webhooks that never oversell stock",
+        "Fixed iOS Safari login drops",
     ],
     techStacks: ["Next.js", "TypeScript", "Tailwind", "Zustand", "Node.js", "Express", "Supabase", "PostgreSQL", "Stripe", "Paystack"],
     link: "https://byzayelle.com/",
