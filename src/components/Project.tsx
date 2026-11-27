@@ -41,12 +41,11 @@ const projects: ProjectItem[] = [
     {
         title: "Zayelle Photo Pipeline",
         coverColor: "#3f9b46",
-        tagline: "Product-photo resizing, moving to AWS Lambda",
-        status: "In progress",
+        tagline: "Serverless product-photo resizing on AWS",
         url: "zayelle-photo-pipeline",
         image: "/projects/photo-pipeline.jpg",
         description:
-            "Turns 3–10 MB product photos for the Byzayelle store into two web-ready WebPs (1200px and 400px) with one Sharp resize function. It runs locally and from a Next.js upload UI; the AWS Lambda + S3 version is set up in a SAM template but not deployed yet.",
+            "Turns 3–10 MB product photos for the Byzayelle store into two web-ready WebPs (1200px and 400px) with one Sharp resize function. Uploading a photo to S3 triggers an AWS Lambda that saves both sizes in about a second, deployed with AWS SAM; the same function also runs locally and behind a Next.js upload UI.",
         techStacks: ["TypeScript", "Node.js", "Sharp", "Next.js", "AWS Lambda", "Amazon S3", "AWS SAM"],
         github: "https://github.com/zainab-kassim/zayelle-photo-pipeline",
     },
